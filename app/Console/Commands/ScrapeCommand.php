@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Scraper\TGDD;
+use App\Scraper\truyenfullVn;
 use Illuminate\Console\Command;
 
 class ScrapeCommand extends Command
@@ -38,7 +38,7 @@ class ScrapeCommand extends Command
      */
     public function handle()
     {
-        $bot = new TGDD();
+        $bot = new truyenfullVn();
         $bot->scrape();
 
     }

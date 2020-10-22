@@ -7,7 +7,7 @@ use Symfony\Component\DomCrawler\Crawler;
 use function GuzzleHttp\Psr7\str;
 use Illuminate\Database\QueryException;
 
-class TGDD
+class truyenfullVn
 {
 
     public function scrape()
