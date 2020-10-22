@@ -26,7 +26,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')->hourly();
         $filepath=base_path().'\storage\test.txt';
-        $schedule->command('scrape:tgdd')->everyMinute()->onFailureWithOutput($filepath);
+        $schedule->command('scrape:start')->everyMinute()->sendOutputTo($filepath);
     }
 
     /**

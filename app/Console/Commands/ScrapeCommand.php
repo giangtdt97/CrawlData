@@ -12,7 +12,7 @@ class ScrapeCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'scrape:tgdd';
+    protected $signature = 'scrape:start';
 
     /**
      * The console command description.

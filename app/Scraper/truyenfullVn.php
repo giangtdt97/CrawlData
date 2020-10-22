@@ -3,6 +3,8 @@
 namespace App\Scraper;
 use App\Models\Product;
 use Goutte\Client;
+use Illuminate\Support\Facades\DB;
+use Symfony\Component\Console\Input\Input;
 use Symfony\Component\DomCrawler\Crawler;
 use function GuzzleHttp\Psr7\str;
 use Illuminate\Database\QueryException;
@@ -18,18 +20,14 @@ class truyenfullVn
                 $crawler = $client->request('GET', $url[$i]);
                 $crawler->filter('div.col-xs-6')->each(
                     function (Crawler $node ) {
-                        try {
                         $name = $node->filter('a')->text();
                         $url = $node->filter('a')->attr('href');
+                        $product = DB::table('products')->where('name',$name)->count();
+                        if(!$product){
                             $product = new Product();
                             $product->name = $name;
                             $product->url = $url;
                             $product->save();
-                        }catch (Illuminate\Database\QueryException $e) {
-                            $errorCode = $e->errorInfo[1];
-                            if ($errorCode == 1062) {
-                                // houston, we have a duplicate entry problem
-                            }
                         }
                     }
                 );
