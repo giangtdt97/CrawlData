@@ -3825,10 +3825,7 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/tests/Unit/ExampleTest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/ScrapeCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/ScrapeCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" afterPath="$PROJECT_DIR$/../fooday" afterDir="false" />
@@ -4015,7 +4012,8 @@
       <workItem from="1603335079889" duration="638000" />
       <workItem from="1603336889655" duration="1521000" />
       <workItem from="1603349487849" duration="1623000" />
-      <workItem from="1603351263339" duration="1213000" />
+      <workItem from="1603351263339" duration="1795000" />
+      <workItem from="1603685506460" duration="124000" />
     </task>
     <servers />
   </component>
@@ -4039,10 +4037,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="422" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1603335026273" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1603351086884">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1603685631334">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1603351086884" />
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1603685631334" />
     <state x="604" y="356" key="NewPhpFileDialog" timestamp="1603250093888">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

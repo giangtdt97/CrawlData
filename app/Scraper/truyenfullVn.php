@@ -22,7 +22,7 @@ class truyenfullVn
                     function (Crawler $node ) {
                         $name = $node->filter('a')->text();
                         $url = $node->filter('a')->attr('href');
-                        $product = DB::table('products')->where('name',$name)->count();
+                        $product = DB::table('products')->where('name',$name)->count(e);
                         if(!$product){
                             $product = new Product();
                             $product->name = $name;
