@@ -12,7 +12,7 @@ class ScrapeChapterCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'scrape_story:start';
+    protected $signature = 'scrape_chapter:start';
 
     /**
      * The console command description.

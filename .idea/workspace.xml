@@ -3825,15 +3825,10 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/tests/Unit/ExampleTest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/crawl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crawl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/ScrapeChapterCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/ScrapeChapterCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Story.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Story.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_21_031123_create_products_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" afterPath="$PROJECT_DIR$/../fooday" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../larastart" beforeDir="false" afterPath="$PROJECT_DIR$/../larastart" afterDir="false" />
@@ -4034,7 +4029,21 @@
       <workItem from="1603706378133" duration="1796000" />
       <workItem from="1603708200215" duration="1751000" />
       <workItem from="1603764402075" duration="1737000" />
-      <workItem from="1603766178155" duration="381000" />
+      <workItem from="1603766178155" duration="1472000" />
+      <workItem from="1603767982365" duration="1832000" />
+      <workItem from="1603769829716" duration="1794000" />
+      <workItem from="1603771637246" duration="1795000" />
+      <workItem from="1603773471503" duration="1801000" />
+      <workItem from="1603775287926" duration="778000" />
+      <workItem from="1603779118824" duration="1795000" />
+      <workItem from="1603780937289" duration="1791000" />
+      <workItem from="1603782742610" duration="1795000" />
+      <workItem from="1603784575741" duration="1795000" />
+      <workItem from="1603786383047" duration="1127000" />
+      <workItem from="1603788327882" duration="1478000" />
+      <workItem from="1603789928757" duration="1795000" />
+      <workItem from="1603791767433" duration="1821000" />
+      <workItem from="1603793642067" duration="1978000" />
     </task>
     <servers />
   </component>

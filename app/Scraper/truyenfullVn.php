@@ -2,6 +2,7 @@
 
 namespace App\Scraper;
 use App\Models\Category;
+use App\Models\Chapter;
 use App\Models\Story;
 use Goutte\Client;
 use Illuminate\Support\Facades\DB;
@@ -15,10 +16,9 @@ class truyenfullVn
 {
     public function scrape()
     {
-        $url=array('https://truyenfull.vn');
-        for ($i = 0; $i < count($url); $i++) {
+        $url='https://truyenfull.vn';
             $client = new Client();
-                $crawler = $client->request('GET', $url[$i]);
+                $crawler = $client->request('GET', $url);
                 $crawler->filter('div.col-xs-6')->each(
                     function (Crawler $node ) {
                         $name = $node->filter('a')->text();
@@ -32,31 +32,56 @@ class truyenfullVn
                         }
                     }
                 );
-        }
     }
     public function scrape_story()
     {
         $categories=Category::all();
         foreach ($categories as $category) {
             for ($k = 0; $k < 400; $k++) {
-
                 $url = array($category->url . 'trang-' . $k);
-
                 for ($i = 0; $i < count($url); $i++) {
                     $client = new Client();
                     $crawler = $client->request('GET', $url[$i]);
                     $crawler->filter('h3.truyen-title')->each(
-                        function (Crawler $node) {
-                            $category_id = Category::where('url', 'https://truyenfull.vn/the-loai/tien-hiep/')->value('id');
+                        function (Crawler $node)use ($category){
+                                $category_id = Category::where('url', $category->url)->value('id');
+                                $name = $node->filter('a')->text();
+                                $url = $node->filter('a')->attr('href');
+                                $story = DB::table('stories')->where('name', $name)->first();
+                                if (!$story) {
+                                    $story = new Story();
+                                    $story->name = $name;
+                                    $story->url = $url;
+                                    $story->category_id = $category_id;
+                                    $story->save();
+                                }
+
+                        }
+                    );
+                }
+            }
+        }
+    }
+    public function scrape_chapter(){
+        $stories=Story::all();
+        foreach ($stories as $story) {
+            for ($k = 0; $k < 100; $k++) {
+                $url = array($story->url.'trang-'. $k.'/#list-chapter');
+                for ($i = 0; $i < count($url); $i++) {
+                    $client = new Client();
+                    $crawler = $client->request('GET', $url[$i]);
+                    $crawler->filter('div.col-xs-12.col-sm-6.col-md-6 li' )->each(
+                        function (Crawler $node)use ($story){
+                            $story_id = Story::where('url', $story->url)->value('id');
                             $name = $node->filter('a')->text();
                             $url = $node->filter('a')->attr('href');
-                            $story = DB::table('stories')->where('name', $name)->first();
-                            if (!$story) {
-                                $story = new Story();
-                                $story->name = $name;
-                                $story->url = $url;
-                                $story->category_id = $category_id;
-                                $story->save();
+                            $chapter = DB::table('chapters')->where('title', $name)->first();
+                            if (!$chapter) {
+                                $chapter = new Chapter();
+                                $chapter->title = $name;
+                                $chapter->url = $url;
+                                $chapter->story_id = $story_id;
+                                $chapter->save();
                             }
                         }
                     );
@@ -64,6 +89,5 @@ class truyenfullVn
             }
         }
     }
-    public function scrape_chapter(){}
 }
 
