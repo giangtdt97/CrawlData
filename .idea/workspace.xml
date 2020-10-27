@@ -3825,8 +3825,15 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/tests/Unit/ExampleTest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/crawl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crawl.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_21_031123_create_products_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" afterPath="$PROJECT_DIR$/../fooday" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../larastart" beforeDir="false" afterPath="$PROJECT_DIR$/../larastart" afterDir="false" />
@@ -3961,6 +3968,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/fabpot/goutte" />
+      <path value="$PROJECT_DIR$/vendor/weidner/goutte" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jAbOJVKGgPlNGPzladjzv89sQx" />
@@ -3970,6 +3978,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -4014,6 +4023,18 @@
       <workItem from="1603349487849" duration="1623000" />
       <workItem from="1603351263339" duration="1795000" />
       <workItem from="1603685506460" duration="124000" />
+      <workItem from="1603693513573" duration="1711000" />
+      <workItem from="1603695243492" duration="1792000" />
+      <workItem from="1603697191229" duration="36000" />
+      <workItem from="1603699115127" duration="1787000" />
+      <workItem from="1603700918139" duration="793000" />
+      <workItem from="1603702247349" duration="468000" />
+      <workItem from="1603702767999" duration="1771000" />
+      <workItem from="1603704556884" duration="1791000" />
+      <workItem from="1603706378133" duration="1796000" />
+      <workItem from="1603708200215" duration="1751000" />
+      <workItem from="1603764402075" duration="1737000" />
+      <workItem from="1603766178155" duration="381000" />
     </task>
     <servers />
   </component>
@@ -4037,10 +4058,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="422" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1603335026273" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1603685631334">
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603694579850">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1603685631334" />
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1603694579850" />
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1603709746548">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1603709746548" />
     <state x="604" y="356" key="NewPhpFileDialog" timestamp="1603250093888">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

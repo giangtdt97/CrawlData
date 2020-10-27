@@ -24,7 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+
         $filepath=base_path().'\storage\test.txt';
         $schedule->command('scrape:start')->everyMinute()->sendOutputTo($filepath);
     }

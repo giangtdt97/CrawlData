@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f94b62c56b20b8b2d29e30a70f38aca",
+    "content-hash": "201a1cdc011747672eec3b6fd92b659d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5014,6 +5014,67 @@
                 }
             ],
             "time": "2020-07-22T23:32:04+00:00"
+        },
+        {
+            "name": "weidner/goutte",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dweidner/laravel-goutte.git",
+                "reference": "146905bccf2373f3f3140f94bf72291901c4fdf9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dweidner/laravel-goutte/zipball/146905bccf2373f3f3140f94bf72291901c4fdf9",
+                "reference": "146905bccf2373f3f3140f94bf72291901c4fdf9",
+                "shasum": ""
+            },
+            "require": {
+                "fabpot/goutte": "^4.0",
+                "illuminate/support": "^8",
+                "php": "^7.3"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Weidner\\Goutte\\GoutteServiceProvider"
+                    ],
+                    "aliases": {
+                        "Goutte": "Weidner\\Goutte\\GoutteFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Weidner\\Goutte\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Weidner",
+                    "email": "hallo@danielweidner.de",
+                    "homepage": "https://danielweidner.de"
+                }
+            ],
+            "description": "Laravel Facade for Goutte, a simple PHP Web Scraper",
+            "homepage": "https://github.com/dweidner/laravel-goutte",
+            "keywords": [
+                "goutte",
+                "laravel",
+                "weidner"
+            ],
+            "time": "2020-10-03T09:47:46+00:00"
         }
     ],
     "packages-dev": [
