@@ -26,7 +26,10 @@ class Kernel extends ConsoleKernel
     {
 
         $filepath=base_path().'\storage\test.txt';
-        $schedule->command('scrape:start')->everyMinute()->sendOutputTo($filepath);
+        $schedule->command('scrape:start')->daily()->sendOutputTo($filepath);
+        $schedule->command('scrape_story:start')->daily()->sendOutputTo($filepath);
+        $schedule->command('scrape_chapter:start')->daily()->sendOutputTo($filepath);
+//        $schedule->command('scrape_rating:start')->daily()->sendOutputTo($filepath);
     }
 
     /**

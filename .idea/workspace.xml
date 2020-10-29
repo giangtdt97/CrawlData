@@ -3826,7 +3826,9 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_035407_create_rates_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_035407_create_rates_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" afterPath="$PROJECT_DIR$/../fooday" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../larastart" beforeDir="false" afterPath="$PROJECT_DIR$/../larastart" afterDir="false" />
@@ -4047,6 +4049,11 @@
       <workItem from="1603853381889" duration="1799000" />
       <workItem from="1603855195266" duration="1795000" />
       <workItem from="1603857005933" duration="1800000" />
+      <workItem from="1603859133035" duration="1442000" />
+      <workItem from="1603864148498" duration="1768000" />
+      <workItem from="1603866919616" duration="586000" />
+      <workItem from="1603868787502" duration="1832000" />
+      <workItem from="1603939632981" duration="1009000" />
     </task>
     <servers />
   </component>
