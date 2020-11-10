@@ -3826,6 +3826,7 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/tests/Unit/ExampleTest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SearchController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" />
@@ -4117,7 +4118,7 @@
       <workItem from="1604997422736" duration="1931000" />
       <workItem from="1604999384172" duration="1811000" />
       <workItem from="1605001217312" duration="1802000" />
-      <workItem from="1605003037038" duration="688000" />
+      <workItem from="1605003037038" duration="1030000" />
     </task>
     <servers />
   </component>
