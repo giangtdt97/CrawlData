@@ -8,20 +8,23 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[CategoryController::class,'index'])->name('welcome');
 Route::get('test', function () {
-   $deviceTokens =Category::whereDay('created_at',now()->format('d'))->pluck('url')->toArray();
-    $notify =Notification::create(
-        [
-            'topic' => 'test',
-            'title' => 'Push Notification',
-            'body' => 'Chúc mừng bạn đã push được Notification',
-        ]
-    );
+   $deviceTokens =\App\Models\User::whereDay('created_at',now()->format('d'))->pluck('device_token')->toArray();
+//    $notify =Notification::create(
+//        [
+//            'topic' => 'test',
+//            'title' => 'Push Notification',
+//            'body' => 'Chúc mừng bạn đã push được Notification',
+//        ]
+//    );
     PushNotificationJob::dispatch('sendBatchNotification', [
         $deviceTokens,
         [
-            'topic' => $notify->topic,
-            'title' => $notify->title,
-            'body' => $notify->body,
+//            'topicName' => $notify->topic,
+//            'title' => $notify->title,
+//            'body' => $notify->body,
+            'topicName' => 'test',
+            'title' => 'Push Notification',
+            'body' => 'Chúc mừng bạn đã push được Notification',
         ],
     ]);
 });

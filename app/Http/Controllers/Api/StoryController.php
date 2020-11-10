@@ -7,6 +7,7 @@ use App\Models\Story;
 use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 use App\Http\Resources\Story as StoryResource;
+use App\Http\Resources\Chapter as ChapterResource;
 use Illuminate\Support\Facades\Crypt;
 
 class StoryController extends Controller
@@ -18,7 +19,7 @@ class StoryController extends Controller
      */
     public function index()
     {
-        $data = Story::all();
+        $data = Story::paginate(10);
         $payload = Crypt::encrypt($data);
         return response()->json([
             'status' => 200,
@@ -72,5 +73,10 @@ class StoryController extends Controller
     public function destroy( Story $story)
     {
         $story->delete();
+    }
+    public function getChapters($id){
+        $chapters = Story::find($id)->chapters()->paginate(25);
+
+        return ChapterResource::collection($chapters);
     }
 }

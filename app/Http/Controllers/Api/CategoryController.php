@@ -11,38 +11,26 @@ use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Http;
 use phpDocumentor\Reflection\Types\Resource_;
 use App\Http\Resources\Category as CategoryResource;
+use App\Http\Resources\Story as StoryResource;
 
 class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()
     {
-        $data = Category::all();
-        $payload = Crypt::encrypt($data);
-        return response()->json([
-            'status' => 200,
-            'message' => 'success',
-            'data' => $payload
-        ],Response::HTTP_OK);
+        $data = Category::paginate(15);
+//        $payload = Crypt::encrypt($data);
+        return  CategoryResource::collection($data);
+//        response()->json([
+//            'status' => 200,
+//            'message' => 'success',
+//            'data' => $payload
+//        ],Response::HTTP_OK);
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return CategoryResource
-     */
-    public function store(Request $request)
-    {
-        $category = Category::create($request->all());
-
-        return new CategoryResource($category);
-    }
-
     /**
      * Display the specified resource.
      *
@@ -53,28 +41,10 @@ class CategoryController extends Controller
     {
         return new CategoryResource($category);
     }
+    public function getStories($id){
+        $stories = Category::find($id)->stories()->paginate(15);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return bool
-     */
-    public function update(Request $request, Category $category)
-    {
-        return $category->update($request->all());
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Category $category)
-    {
-        $category->delete();
+        return StoryResource::collection($stories);
     }
 
 }

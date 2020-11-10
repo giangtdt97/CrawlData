@@ -17,9 +17,9 @@ class FcmService implements NotificationService
      */
     public function sendBatchNotification($deviceTokens, $data = [])
     {
-        self::subscribeTopic($deviceTokens, $data['topic']);
-        self::sendNotification($data, $data['topic']);
-        self::unsubscribeTopic($deviceTokens, $data['topic']);
+        self::subscribeTopic($deviceTokens, $data['topicName']);
+        self::sendNotification($data, $data['topicName']);
+        self::unsubscribeTopic($deviceTokens, $data['topicName']);
     }
 
     /**

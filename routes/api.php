@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ChapterController;
+use App\Http\Controllers\Api\SearchController;
 use App\Http\Controllers\Api\StoryController;
 use App\Http\Controllers\Api\AuthController;
 use Illuminate\Http\Request;
@@ -21,9 +22,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::apiResource('categories', CategoryController::class);
-Route::apiResource('stories', StoryController::class);
-Route::apiResource('chapters', ChapterController::class);
+Route::apiResource('categories', CategoryController::class)->only('index','show');
+Route::apiResource('stories', StoryController::class)->only('index','show');
+Route::apiResource('chapters', ChapterController::class)->only('index','show');
 Route::group([
     'prefix' => 'auth'
 ], function () {
@@ -37,3 +38,6 @@ Route::group([
         Route::get('user', [AuthController::class,'user']);
     });
 });
+Route::post('search', [SearchController::class,'search']);
+Route::get('categories/{category}/stories', [CategoryController::class ,'getStories']);
+Route::get('stories/{story}/chapters', [StoryController::class ,'getChapters']);
