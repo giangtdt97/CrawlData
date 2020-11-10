@@ -17,10 +17,7 @@ class SearchController extends Controller
         ]);
 
         $query = $request->input('query');
-        $stories = Story::where('name', 'like', "%$query%")
-            ->orWhere('url', 'like', "%$query%")
-            ->get();
-
-         return  StoryResource::collection($stories);
+        $stories = Story::where('name', 'like', "%$query%")->orWhere('url', 'like', "%$query%")->paginate(10);
+        return  StoryResource::collection($stories);
     }
 }
