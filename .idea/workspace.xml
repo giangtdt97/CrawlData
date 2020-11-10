@@ -3825,12 +3825,21 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/tests/Unit/ExampleTest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/crawl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crawl.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_035407_create_rates_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_035407_create_rates_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" afterPath="$PROJECT_DIR$/../fooday" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../larastart" beforeDir="false" afterPath="$PROJECT_DIR$/../larastart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../laravel-ecommerce-example" beforeDir="false" />
     </list>
@@ -3903,7 +3912,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
@@ -3938,7 +3946,6 @@
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
-      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
@@ -3964,6 +3971,17 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/fabpot/goutte" />
       <path value="$PROJECT_DIR$/vendor/weidner/goutte" />
+      <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/vendor/league/event" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jAbOJVKGgPlNGPzladjzv89sQx" />
@@ -3977,11 +3995,17 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ecomerce_voyager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\crawl\app\Http\Controllers" />
+      <recent name="D:\xampp\htdocs\crawl\app\Models" />
+      <recent name="D:\xampp\htdocs\crawl\app" />
+      <recent name="D:\xampp\htdocs\crawl\app\Http\Controllers\Api" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\crawl\storage" />
     </key>
@@ -4054,6 +4078,44 @@
       <workItem from="1603866919616" duration="586000" />
       <workItem from="1603868787502" duration="1832000" />
       <workItem from="1603939632981" duration="1009000" />
+      <workItem from="1603941889422" duration="1810000" />
+      <workItem from="1603943827607" duration="938000" />
+      <workItem from="1603945718484" duration="2000" />
+      <workItem from="1604458423371" duration="865000" />
+      <workItem from="1604460326496" duration="788000" />
+      <workItem from="1604470352173" duration="1226000" />
+      <workItem from="1604472259133" duration="958000" />
+      <workItem from="1604474168640" duration="1398000" />
+      <workItem from="1604542654550" duration="1399000" />
+      <workItem from="1604545355576" duration="1298000" />
+      <workItem from="1604551338492" duration="1008000" />
+      <workItem from="1604557098528" duration="1179000" />
+      <workItem from="1604559072052" duration="766000" />
+      <workItem from="1604560969592" duration="1051000" />
+      <workItem from="1604629046908" duration="1743000" />
+      <workItem from="1604630811250" duration="1802000" />
+      <workItem from="1604632640852" duration="1795000" />
+      <workItem from="1604635768117" duration="1801000" />
+      <workItem from="1604637617598" duration="1774000" />
+      <workItem from="1604640539714" duration="1276000" />
+      <workItem from="1604642846716" duration="1742000" />
+      <workItem from="1604644673425" duration="953000" />
+      <workItem from="1604646448082" duration="1772000" />
+      <workItem from="1604648354819" duration="833000" />
+      <workItem from="1604888866052" duration="1521000" />
+      <workItem from="1604890684835" duration="1761000" />
+      <workItem from="1604892503904" duration="1709000" />
+      <workItem from="1604894322149" duration="1865000" />
+      <workItem from="1604896604953" duration="1602000" />
+      <workItem from="1604898637375" duration="1237000" />
+      <workItem from="1604902685080" duration="1772000" />
+      <workItem from="1604904908769" duration="1763000" />
+      <workItem from="1604906913036" duration="1749000" />
+      <workItem from="1604908739528" duration="1788000" />
+      <workItem from="1604910609137" duration="256000" />
+      <workItem from="1604913406428" duration="155000" />
+      <workItem from="1604914569861" duration="10000" />
+      <workItem from="1604915253723" duration="606000" />
     </task>
     <servers />
   </component>
@@ -4077,18 +4139,18 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="422" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1603335026273" />
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603694579850">
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604889209001">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1603694579850" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1603855766848">
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1604889209001" />
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1604914578774">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1603855766848" />
-    <state x="604" y="356" key="NewPhpFileDialog" timestamp="1603250093888">
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1604914578774" />
+    <state x="604" y="356" key="NewPhpFileDialog" timestamp="1604898195517">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="604" y="356" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1603250093888" />
+    <state x="604" y="356" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1604898195517" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1603269128950">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
