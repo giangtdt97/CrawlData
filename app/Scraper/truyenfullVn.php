@@ -18,49 +18,49 @@ class truyenfullVn
 {
     public function scrape()
     {
-        try {
-            $stories = Story::all();
-            foreach ($stories as $story) {
-                $url = ($story->url);
-                $client = new Client();
-                $crawler = $client->request('GET', $url);
-                $crawler->filter('div.col-xs-12.col-sm-12.col-md-9.col-truyen-main')->each(
-                    function (Crawler $node) use ($story) {
-                        $story_id = Story::where('url', $story->url)->value('id');
-                        $name = $node->filter('h3.title')->text();
-                        $rating = $node->filter('strong span')->text();
-                        $rate = DB::table('rates')->where('story_title', $name)->first();
-                        if (!$rate) {
-                            $rate = new Rate();
-                            $rate->story_title = $name;
-                            $rate->rating = $rating;
-                            $rate->story_id = $story_id;
-                            $rate->save();
-                        }
-                    }
-                );
-            }
-        } catch (Throwable $e) {
-            report($e);
-
-            return false;
-        }
-//        $url='https://truyenfull.vn';
-//            $client = new Client();
+//        try {
+//            $stories = Story::all();
+//            foreach ($stories as $story) {
+//                $url = ($story->url);
+//                $client = new Client();
 //                $crawler = $client->request('GET', $url);
-//                $crawler->filter('div.col-xs-6')->each(
-//                    function (Crawler $node ) {
-//                        $name = $node->filter('a')->text();
-//                        $url = $node->filter('a')->attr('href');
-//                        $category = DB::table('categories')->where('name',$name)->first();
-//                        if(!$category){
-//                            $category = new Category();
-//                            $category->name = $name;
-//                            $category->url = $url;
-//                            $category->save();
+//                $crawler->filter('div.col-xs-12.col-sm-12.col-md-9.col-truyen-main')->each(
+//                    function (Crawler $node) use ($story) {
+//                        $story_id = Story::where('url', $story->url)->value('id');
+//                        $name = $node->filter('h3.title')->text();
+//                        $rating = $node->filter('strong span')->text();
+//                        $rate = DB::table('rates')->where('story_title', $name)->first();
+//                        if (!$rate) {
+//                            $rate = new Rate();
+//                            $rate->story_title = $name;
+//                            $rate->rating = $rating;
+//                            $rate->story_id = $story_id;
+//                            $rate->save();
 //                        }
 //                    }
 //                );
+//            }
+//        } catch (Throwable $e) {
+//            report($e);
+//
+//            return false;
+//        }
+        $url='https://truyenfull.vn';
+            $client = new Client();
+                $crawler = $client->request('GET', $url);
+                $crawler->filter('div.col-xs-6')->each(
+                    function (Crawler $node ) {
+                        $name = $node->filter('a')->text();
+                        $url = $node->filter('a')->attr('href');
+                        $category = DB::table('categories')->where('name',$name)->first();
+                        if(!$category){
+                            $category = new Category();
+                            $category->name = $name;
+                            $category->url = $url;
+                            $category->save();
+                        }
+                    }
+                );
 
     }
     public function scrape_story()
