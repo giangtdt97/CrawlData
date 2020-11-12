@@ -14,17 +14,18 @@ class ChapterController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()
     {
         $data = Chapter::all();
-        $payload = Crypt::encrypt($data);
-        return response()->json([
-            'status' => 200,
-            'message' => 'success',
-            'data' => $payload
-        ],Response::HTTP_OK);
+        return  ChapterResource::collection($data);
+//        $payload = Crypt::encrypt($data);
+//        return response()->json([
+//            'status' => 200,
+//            'message' => 'success',
+//            'data' => $payload
+//        ],Response::HTTP_OK);
     }
 
     /**

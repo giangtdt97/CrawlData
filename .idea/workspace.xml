@@ -3827,7 +3827,6 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SearchController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../larastart" beforeDir="false" afterPath="$PROJECT_DIR$/../larastart" afterDir="false" />
@@ -3985,7 +3984,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FoodKhang" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -4118,7 +4117,8 @@
       <workItem from="1604997422736" duration="1931000" />
       <workItem from="1604999384172" duration="1811000" />
       <workItem from="1605001217312" duration="1802000" />
-      <workItem from="1605003037038" duration="1030000" />
+      <workItem from="1605003037038" duration="1439000" />
+      <workItem from="1605148960582" duration="1183000" />
     </task>
     <servers />
   </component>
@@ -4146,10 +4146,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1605002818164" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1605002343044">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1605004474654">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1605002343044" />
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1605004474654" />
     <state x="604" y="356" key="NewPhpFileDialog" timestamp="1604998172377">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

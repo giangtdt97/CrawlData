@@ -15,17 +15,18 @@ class StoryController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()
     {
         $data = Story::paginate(10);
-        $payload = Crypt::encrypt($data);
-        return response()->json([
-            'status' => 200,
-            'message' => 'success',
-            'data' => $payload
-        ],Response::HTTP_OK);
+        return StoryResource::collection($data);
+//        $payload = Crypt::encrypt($data);
+//        response()->json([
+//            'status' => 200,
+//            'message' => 'success',
+//            'data' => $payload
+//        ],Response::HTTP_OK);
     }
 
     /**

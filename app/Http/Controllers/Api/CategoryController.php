@@ -18,19 +18,19 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()
     {
         $data = Category::paginate(15);
-        $payload = Crypt::encrypt($data);
+//        $payload = Crypt::encrypt($data);
         return
-//            CategoryResource::collection($data);
-        response()->json([
-            'status' => 200,
-            'message' => 'success',
-            'data' => $payload
-        ],Response::HTTP_OK);
+            CategoryResource::collection($data);
+//        response()->json([
+//            'status' => 200,
+//            'message' => 'success',
+//            'data' => $payload
+//        ],Response::HTTP_OK);
     }
     /**
      * Display the specified resource.
