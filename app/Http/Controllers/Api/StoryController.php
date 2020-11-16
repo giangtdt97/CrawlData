@@ -76,7 +76,7 @@ class StoryController extends Controller
         $story->delete();
     }
     public function getChapters($id){
-        $chapters = Story::find($id)->chapters()->paginate(25);
+        $chapters = Story::find($id)->chapters()->get();
 
         return ChapterResource::collection($chapters);
     }
