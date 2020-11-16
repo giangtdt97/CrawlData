@@ -3827,6 +3827,9 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_035407_create_rates_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_035407_create_rates_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../larastart" beforeDir="false" afterPath="$PROJECT_DIR$/../larastart" afterDir="false" />
@@ -4119,6 +4122,13 @@
       <workItem from="1605001217312" duration="1802000" />
       <workItem from="1605003037038" duration="1439000" />
       <workItem from="1605148960582" duration="1183000" />
+      <workItem from="1605181332986" duration="779000" />
+      <workItem from="1605502228250" duration="1385000" />
+      <workItem from="1605504020852" duration="1645000" />
+      <workItem from="1605507983383" duration="1751000" />
+      <workItem from="1605509755297" duration="1796000" />
+      <workItem from="1605511931395" duration="1550000" />
+      <workItem from="1605514362783" duration="1783000" />
     </task>
     <servers />
   </component>
@@ -4138,22 +4148,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="395" y="111" key="#Inspections" timestamp="1605502860334">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="395" y="111" key="#Inspections/0.0.1536.864@0.0.1536.864" timestamp="1605502860334" />
     <state x="422" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603335026273">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="422" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1603335026273" />
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605002818164">
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605513071486">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1605002818164" />
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1605513071486" />
     <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1605004474654">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1605004474654" />
-    <state x="604" y="356" key="NewPhpFileDialog" timestamp="1604998172377">
+    <state x="604" y="356" key="NewPhpFileDialog" timestamp="1605512704312">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="604" y="356" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1604998172377" />
+    <state x="604" y="356" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1605512704312" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1603269128950">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

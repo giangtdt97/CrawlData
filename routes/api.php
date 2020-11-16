@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ChapterController;
+use App\Http\Controllers\Api\RateController;
 use App\Http\Controllers\Api\SearchController;
 use App\Http\Controllers\Api\StoryController;
 use App\Http\Controllers\Api\AuthController;
@@ -25,6 +26,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::apiResource('categories', CategoryController::class)->only('index','show');
 Route::apiResource('stories', StoryController::class)->only('index','show');
 Route::apiResource('chapters', ChapterController::class)->only('index','show');
+Route::apiResource('rates', RateController::class)->only('index','show');
 Route::group([
     'prefix' => 'auth'
 ], function () {
