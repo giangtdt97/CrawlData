@@ -18,14 +18,16 @@ class ChapterController extends Controller
      */
     public function index()
     {
-        $data = Chapter::all();
-        return  ChapterResource::collection($data);
+//        $data = Chapter::with('contents')->get();
+//        return  ChapterResource::collection($data);
 //        $payload = Crypt::encrypt($data);
 //        return response()->json([
 //            'status' => 200,
 //            'message' => 'success',
 //            'data' => $payload
 //        ],Response::HTTP_OK);
+        $chapters= Chapter::with('contents')->get();
+        return  ChapterResource::collection($chapters);
     }
 
     /**

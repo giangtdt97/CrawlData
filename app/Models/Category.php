@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     public function stories(){
-        return $this->hasMany(Story::class,'category_id');
+        return $this->belongsToMany(Story::class,'category_stories');
     }
+//    public function stories(){
+//        return $this->hasMany(Story::class,'category_id');
+//    }
 }

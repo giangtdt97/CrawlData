@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStoriesTable extends Migration
+class AddThumbnailImgToRatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateStoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('stories', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('url');
-            $table->timestamps();
+        Schema::table('rates', function (Blueprint $table) {
+            $table->longText('thumbnail_img')->nullable()->after('author');
         });
     }
 
@@ -28,6 +25,8 @@ class CreateStoriesTable extends Migration
      */
     public function down()
     {
-//        Schema::dropIfExists('stories');
+//        Schema::table('rates', function (Blueprint $table) {
+//            //
+//        });
     }
 }

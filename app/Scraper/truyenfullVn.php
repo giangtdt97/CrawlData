@@ -2,139 +2,234 @@
 
 namespace App\Scraper;
 use App\Models\Category;
+use App\Models\CategoryStory;
 use App\Models\Chapter;
+use App\Models\Content;
 use App\Models\Rate;
 use App\Models\Story;
 use Goutte\Client;
-use Illuminate\Support\Facades\DB;
-use Ramsey\Uuid\Type\Integer;
-use Symfony\Component\Console\Input\Input;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\Exception\RequestException;
+use PhpParser\Node\Stmt\TryCatch;
 use Symfony\Component\DomCrawler\Crawler;
-use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpClient\Exception\TransportException;
 use Throwable;
-use function GuzzleHttp\Psr7\str;
-use Illuminate\Database\QueryException;
+
 
 class truyenfullVn
 {
     public function scrape()
     {
-        $stories = Story::all();
-        foreach ($stories as $story) {
-            try {
-                $url = array($story->url);
-                $client = new Client();
-                for ($i = 0; $i < count($url); $i++) {
-                    $crawler = $client->request('GET', $url[$i]);
-                    $crawler->filter('div.col-xs-12.col-sm-12.col-md-9.col-truyen-main')->each(
-                        function (Crawler $node) use ($story) {
-                            $story_id = Story::where('url', $story->url)->value('id');
-                            $name = $node->filter('h3.title')->text();
-                            $author = $node->filter('a[itemprop="author"]')->attr('title');
-                            $rating = $node->filter('strong span')->text();
-                            $description = $node->filter('div[itemprop="description"]')->text();
-                            $rate = DB::table('rates')->where('story_title', $name)->first();
-                            if (!$rate) {
-                                $rate = new Rate();
-                                $rate->story_id = $story_id;
-                                $rate->story_title = $name;
-                                $rate->auhthor = $author;
-                                $rate->rating = $rating;
-                                $rate->description = $description;
-
-                                $rate->save();
+//        $url = 'https://truyenfull.vn/';
+//        $client = new Client();
+//        $crawler = $client->request('GET', $url);
+//        $crawler->filter('div.col-xs-6')->each(
+//            function (Crawler $node) {
+//                $name = $node->filter('a')->attr('title');
+//                $url = $node->filter('a')->attr('href');
+//                $category = Category::where('name', $name)->first();
+//                if (!$category) {
+//                    $category = new Category();
+//                    $category->name = $name;
+//                    $category->url = $url;
+//                    $category->save();
+//                }
+//            }
+//        );
+        $chapters = Chapter::all();
+        foreach ($chapters as $chapter) {
+            $urls = array($chapter->url);
+            foreach ($urls as $url) {
+                try {
+                    $client = new Client();
+                    try{
+                    $crawler = $client->request('GET', $url);
+                }catch (TransportException $e){
+                        return true;
+                    }
+                    $crawler->filter('div#wrap')->each(
+                        function (Crawler $node) use ($chapter) {
+                            $chapter_id = Chapter::where('url', $chapter->url)->value('id');
+                            $content = $node->filter('div.chapter-c')->text();
+                            $chap = Content::where('chapter_id', $chapter_id)->first();
+                            if (!$chap) {
+                                $chap = new Content();
+                                $chap->content = $content;
+                                $chap->chapter_id = $chapter_id;
+                                $chap->save();
                             }
                         }
+
                     );
+                } catch (TransportException $e) {
+                    return true;
                 }
-            } catch (Throwable $e) {
-                echo $e->getMessage();
             }
         }
-//        $url='https://truyenfull.vn/';
-//            $client = new Client();
-//                $crawler = $client->request('GET', $url);
-//                $crawler->filter('div.col-xs-6 ')->each(
-//                    function (Crawler $node ) {
-//                        $name = $node->filter('a')->attr('title');
-//                        $url = $node->filter('a')->attr('href');
-//                        $category = DB::table('categories')->where('name',$name)->first();
-//                        if(!$category){
-//                            $category = new Category();
-//                            $category->name = $name;
-//                            $category->url = $url;
-//                            $category->save();
-//                        }
-//                    }
-//                );
-
     }
 
     public function scrape_story()
     {
-        $categories=Category::all();
+        $categories = Category::all();
         foreach ($categories as $category) {
-            for ($k = 1; $k <= 400; $k++) {
-                $url = array($category->url . 'trang-' . $k . '/');
-                $client = new Client();
+            for ($k = 1; $k <= 380; $k++) {
+                $urls = [$category->url . 'trang-' . $k . '/'];
                 try {
-                    for ($i = 0; $i < count($url); $i++) {
-                        $crawler = $client->request('GET', $url[$i]);
-                        $crawler->filter('h3.truyen-title')->each(
-                            function (Crawler $node) use ($category) {
-                                $category_id = Category::where('url', $category->url)->value('id');
-                                $name = $node->filter('a')->attr('title');
-                                $url = $node->filter('a')->attr('href');
-                                $story = DB::table('stories')->where('url', $url)->first();
-                                if (!$story) {
-                                    $story = new Story();
-                                    $story->name = $name;
-                                    $story->url = $url;
-                                    $story->category_id = $category_id;
-                                    $story->save();
-                                }
-
+                    foreach ($urls as $url) {
+                        try {
+                            $client = new Client();
+                            try{
+                                $crawler = $client->request('GET', $url);
+                            }catch (RequestException $e){
+                                echo Psr7\Message::toString($e->getRequest());
+                                echo Psr7\Message::toString($e->getResponse());
+                                return false;
                             }
-                        );
+                            $crawler->filter('h3.truyen-title')->each(
+                                function (Crawler $node) {
+                                    $name = $node->filter('a')->attr('title');
+                                    $url = $node->filter('a')->attr('href');
+                                    $story = Story::where('url', $url)->first();
+                                    if (!$story) {
+                                        $story = new Story();
+                                        $story->name = $name;
+                                        $story->url = $url;
+                                        $story->save();
+                                    }
+                                }
+                            );
+                        } catch (\InvalidArgumentException $e) {
+                            report($e);
+                            return true;
+                        }
                     }
                 } catch (Throwable $e) {
-                    echo $e->getMessage();
+                    report($e);
+                    return true;
                 }
             }
         }
     }
+
     public function scrape_chapter()
+    {
+
+        $stories = Story::all();
+        foreach ($stories as $story) {
+            for ($k = 1; $k <= 100; $k++) {
+                $urls = [$story->url . 'trang-' . $k . '/#list-chapter'];
+                foreach ($urls as $url) {
+                    try {
+                        $client = new Client();
+                        try {
+                            $crawler = $client->request('GET', $url);
+                        } catch (TransportException $e) {
+                            return true;
+                        }
+                            $crawler->filter('div.col-xs-12.col-sm-6.col-md-6 li')->each(
+                                function (Crawler $node) use ($story) {
+                                    $story_id = Story::where('url', $story->url)->value('id');
+                                    $name = $node->filter('a')->attr('title');
+                                    $url = $node->filter('a')->attr('href');
+                                    $chapter = Chapter::where('url', $url)->first();
+                                    if (!$chapter) {
+                                        $chapter = new Chapter();
+                                        $chapter->title = $name;
+                                        $chapter->url = $url;
+                                        $chapter->story_id = $story_id;
+                                        $chapter->save();
+                                    }
+                                }
+
+                            );
+                        } catch (\InvalidArgumentException $e) {
+                            report($e);
+                            return true;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    public function scrape_detail()
     {
         $stories = Story::all();
         foreach ($stories as $story) {
-            for ($k = 0; $k < 100; $k++) {
-                $url = array($story->url . 'trang-' . $k . '/#list-chapter');
-
-                try {
-                    $client = new Client();
-                    for ($i = 0; $i < count($url); $i++) {
-                        $crawler = $client->request('GET', $url[$i]);
-                        $crawler->filter('div.col-xs-12.col-sm-6.col-md-6 li')->each(
+            $urls = [$story->url];
+                foreach ($urls as $url) {
+                        $client = new Client();
+                    try {
+                        $crawler = $client->request('GET', $url);
+                    }catch (TransportException $e){
+                        return false;
+                    }
+                    $crawler->filter('div.col-xs-12.col-sm-12.col-md-9.col-truyen-main')->each(
                             function (Crawler $node) use ($story) {
                                 $story_id = Story::where('url', $story->url)->value('id');
-                                $name = $node->filter('a')->attr('title');
-                                $url = $node->filter('a')->attr('href');
-                                $chapter = DB::table('chapters')->where('url', $url)->first();
-                                if (!$chapter) {
-                                    $chapter = new Chapter();
-                                    $chapter->title = $name;
-                                    $chapter->url = $url;
-                                    $chapter->story_id = $story_id;
-                                    $chapter->save();
+                                $name = $node->filter('h3.title')->text();
+                                $author = $node->filter('a[itemprop="author"]')->attr('title');
+                                $rating = $node->filter('strong span[itemprop="ratingValue"]')->text();
+                                $description = $node->filter('div[itemprop="description"]')->text();
+                                $ratingCount=$node->filter('strong span[itemprop="ratingCount"]')->text();
+//                                $thumbnail=$node->filter('img[itemprop="image"]')->attr('src');
+                                $rate =Rate::where('story_title', $name)->first();
+                                if (!$rate) {
+                                    $rate = new Rate();
+                                    $rate->story_id = $story_id;
+                                    $rate->story_title = $name;
+                                    $rate->author = $author;
+//                                    $rate->thumbnail_img=$thumbnail;
+                                    $rate->rating = $rating;
+                                    $rate->rating_count=$ratingCount;
+                                    $rate->description = $description;
+                                    $rate->save();
                                 }
                             }
                         );
-                    }
-                } catch (Throwable $e) {
-                    echo $e->getMessage();
                 }
-            }
         }
-    }
+//        $categories = Category::all();
+//        foreach ($categories as $category) {
+//            for ($k = 1; $k <= 380; $k++) {
+//                $urls = [$category->url . 'trang-' . $k . '/'];
+//                try {
+//                    foreach ($urls as $url) {
+//                        try {
+//                            $client = new Client();
+//                            $crawler = $client->request('GET', $url);
+//                            $crawler->filter('h3.truyen-title')->each(
+//                                function (Crawler $node) use ($category) {
+//                                    $category_id = Category::where('url', $category->url)->value('id');
+//                                    $url = $node->filter('a')->attr('href');
+//                                    $story_id = Story::where('url', $url)->value('id');
+//
+//                                    $cate = CategoryStory::where('story_id', $story_id)->first();
+//                                    $story = CategoryStory::where('category_id', $category_id)->first();
+//                                    if (!$story) {
+//                                        $cate_story = new CategoryStory();
+//                                        $cate_story->category_id = $category_id;
+//                                        $cate_story->story_id = $story_id;
+//                                        $cate_story->save();
+//                                    } elseif ($story && !$cate) {
+//                                        $cate_story = new CategoryStory();
+//                                        $cate_story->category_id = $category_id;
+//                                        $cate_story->story_id = $story_id;
+//                                        $cate_story->save();
+//                                    }
+//                                }
+//                            );
+//                        } catch (\InvalidArgumentException $e) {
+//                            report($e);
+//                            return true;
+//                        }
+//                    }
+//                } catch (Throwable $e) {
+//                    report($e);
+//                    return true;
+//                }
+//            }
+//        }
+        }
 }
 

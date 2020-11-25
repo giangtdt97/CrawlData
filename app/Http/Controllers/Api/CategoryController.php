@@ -43,7 +43,7 @@ class CategoryController extends Controller
         return new CategoryResource($category);
     }
     public function getStories($id){
-        $stories = Category::find($id)->stories()->paginate(15);
+        $stories = Category::findorFail($id)->stories()->paginate(15);
 
         return StoryResource::collection($stories);
     }

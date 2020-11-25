@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddForeignKeyToStoriesTable extends Migration
+class AddRatingCountToRatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddForeignKeyToStoriesTable extends Migration
      */
     public function up()
     {
-        Schema::table('stories', function (Blueprint $table) {
-            $table->foreign('category_id')->references('id')->on('categories');
+        Schema::table('rates', function (Blueprint $table) {
+            $table->float('rating_count')->after('rating');
         });
     }
 
@@ -25,7 +25,7 @@ class AddForeignKeyToStoriesTable extends Migration
      */
     public function down()
     {
-        Schema::table('stories', function (Blueprint $table) {
+        Schema::table('rates', function (Blueprint $table) {
             //
         });
     }

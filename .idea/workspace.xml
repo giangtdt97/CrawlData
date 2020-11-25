@@ -3827,10 +3827,21 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/StoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/StoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.rnd" beforeDir="false" afterPath="$PROJECT_DIR$/.rnd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ChapterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ChapterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Chapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Chapter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Rate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Rate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Story.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Story.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Chapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Chapter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Story.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Story.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_26_063002_create_stories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_26_063002_create_stories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_26_065638_add_foreign_key_to_stories_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_035407_create_rates_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_035407_create_rates_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../larastart" beforeDir="false" afterPath="$PROJECT_DIR$/../larastart" afterDir="false" />
@@ -3988,20 +3999,21 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../agape" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\crawl\storage" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\crawl\database\migrations" />
       <recent name="D:\xampp\htdocs\crawl\app\Http\Controllers" />
       <recent name="D:\xampp\htdocs\crawl\app\Models" />
       <recent name="D:\xampp\htdocs\crawl\app" />
       <recent name="D:\xampp\htdocs\crawl\app\Http\Controllers\Api" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\crawl\app\Models" />
+      <recent name="D:\xampp\htdocs\crawl\storage" />
     </key>
   </component>
   <component name="RunManager">
@@ -4134,6 +4146,68 @@
       <workItem from="1605518222984" duration="1798000" />
       <workItem from="1605520094964" duration="1397000" />
       <workItem from="1605522033106" duration="1676000" />
+      <workItem from="1605523877769" duration="696000" />
+      <workItem from="1605579928201" duration="1913000" />
+      <workItem from="1605581952014" duration="1621000" />
+      <workItem from="1605584253627" duration="1751000" />
+      <workItem from="1605586122754" duration="1718000" />
+      <workItem from="1605587928836" duration="1732000" />
+      <workItem from="1605592089940" duration="916000" />
+      <workItem from="1605593903382" duration="1371000" />
+      <workItem from="1605597018798" duration="1291000" />
+      <workItem from="1605599122220" duration="1675000" />
+      <workItem from="1605600951301" duration="1505000" />
+      <workItem from="1605602772642" duration="1632000" />
+      <workItem from="1605604598397" duration="1409000" />
+      <workItem from="1605606438293" duration="1566000" />
+      <workItem from="1605608228306" duration="1988000" />
+      <workItem from="1605610413375" duration="522000" />
+      <workItem from="1605667064700" duration="864000" />
+      <workItem from="1605669207718" duration="815000" />
+      <workItem from="1605672695886" duration="719000" />
+      <workItem from="1605673938452" duration="525000" />
+      <workItem from="1605684096490" duration="325000" />
+      <workItem from="1605684830817" duration="875000" />
+      <workItem from="1605685719661" duration="626000" />
+      <workItem from="1605686510922" duration="201000" />
+      <workItem from="1605691947526" duration="1734000" />
+      <workItem from="1605752709333" duration="1777000" />
+      <workItem from="1605754501726" duration="1786000" />
+      <workItem from="1605756404713" duration="682000" />
+      <workItem from="1605767854300" duration="1617000" />
+      <workItem from="1605774060830" duration="1729000" />
+      <workItem from="1605775937178" duration="1250000" />
+      <workItem from="1605777679264" duration="1749000" />
+      <workItem from="1605779529984" duration="1779000" />
+      <workItem from="1605781344379" duration="1783000" />
+      <workItem from="1605783154856" duration="1270000" />
+      <workItem from="1605838825700" duration="1741000" />
+      <workItem from="1605840584317" duration="1794000" />
+      <workItem from="1605842391927" duration="1794000" />
+      <workItem from="1605844203065" duration="648000" />
+      <workItem from="1605846179598" duration="1204000" />
+      <workItem from="1605848031865" duration="1767000" />
+      <workItem from="1605849883486" duration="1794000" />
+      <workItem from="1605851693997" duration="1798000" />
+      <workItem from="1605857868219" duration="612000" />
+      <workItem from="1605865373517" duration="1793000" />
+      <workItem from="1605867183074" duration="2124000" />
+      <workItem from="1605869323748" duration="1115000" />
+      <workItem from="1606272250465" duration="1692000" />
+      <workItem from="1606273982987" duration="1812000" />
+      <workItem from="1606275864205" duration="1751000" />
+      <workItem from="1606277799794" duration="1750000" />
+      <workItem from="1606279640443" duration="1729000" />
+      <workItem from="1606281472503" duration="1471000" />
+      <workItem from="1606283328293" duration="720000" />
+      <workItem from="1606285502037" duration="1746000" />
+      <workItem from="1606287528494" duration="1722000" />
+      <workItem from="1606289678994" duration="1640000" />
+      <workItem from="1606291410200" duration="1805000" />
+      <workItem from="1606293496917" duration="1677000" />
+      <workItem from="1606295626943" duration="1115000" />
+      <workItem from="1606297339492" duration="1355000" />
+      <workItem from="1606299170124" duration="480000" />
     </task>
     <servers />
   </component>
@@ -4161,14 +4235,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="422" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1603335026273" />
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605513071486">
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605755311246">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1605513071486" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1605004474654">
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1605755311246" />
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1606279111095">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1605004474654" />
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1606279111095" />
     <state x="523" y="155" key="NewPhpClassDialog" timestamp="1605517005916">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

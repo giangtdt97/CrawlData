@@ -13,11 +13,11 @@ class Rate extends JsonResource
     public function toArray($request)
     {
         return [
-            'id'=>$this->id,
             'story_id' => $this->story_id,
             'story_title' => $this->story_title,
-            'author'=>$this->auhthor,
+            'author'=>$this->author,
             'rating'=>$this->rating,
+            'rating_count'=>$this->rating_count,
             'description'=>$this->description,
 
         ];

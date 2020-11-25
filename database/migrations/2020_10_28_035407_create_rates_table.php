@@ -17,7 +17,7 @@ class CreateRatesTable extends Migration
             $table->id();
             $table->bigInteger('story_id')->unsigned();
             $table->string('story_title');
-            $table->string('rating');
+            $table->float('rating');
             $table->longText('description');
             $table->timestamps();
         });
