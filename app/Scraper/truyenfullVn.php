@@ -21,58 +21,57 @@ class truyenfullVn
 {
     public function scrape()
     {
-        $url = 'https://truyenfull.vn/';
-        $client = new Client();
-        $crawler = $client->request('GET', $url);
-        $crawler->filter('div.col-xs-6')->each(
-            function (Crawler $node) {
-                $name = $node->filter('a')->attr('title');
-                $url = $node->filter('a')->attr('href');
-                $category = Category::where('name', $name)->first();
-                if (!$category) {
-                    $category = new Category();
-                    $category->name = $name;
-                    $category->url = $url;
-                    $category->save();
-                }
-            }
-        );
-//        $chapters = Chapter::all();
-//        foreach ($chapters as $chapter) {
-//            $urls = array($chapter->url);
-//            foreach ($urls as $url) {
-//                    $client = new Client();
-//                    try{
-//                    $crawler = $client->request('GET', $url);
-//                }catch (TransportException $e){
-//                        Log::info($e);
-//                        return true;
-//                    }
-//                    $crawler->filter('div#wrap')->each(
-//                        function (Crawler $node) use ($chapter) {
-//                            $chapter_id = Chapter::where('url', $chapter->url)->value('id');
-//                            $content = $node->filter('div.chapter-c')->text();
-//                            $chap = Content::where('chapter_id', $chapter_id)->first();
-//                            if (!$chap) {
-//                                $chap = new Content();
-//                                $chap->content = $content;
-//                                $chap->chapter_id = $chapter_id;
-//                                $chap->save();
-//                            }
-//                        }
-//
-//                    );
-//
+//        $url = 'https://truyenfull.vn/';
+//        $client = new Client();
+//        $crawler = $client->request('GET', $url);
+//        $crawler->filter('div.col-xs-6')->each(
+//            function (Crawler $node) {
+//                $name = $node->filter('a')->attr('title');
+//                $url = $node->filter('a')->attr('href');
+//                $category = Category::where('name', $name)->first();
+//                if (!$category) {
+//                    $category = new Category();
+//                    $category->name = $name;
+//                    $category->url = $url;
+//                    $category->save();
+//                }
 //            }
-//        }
+//        );
+        $chapters = Chapter::all();
+        foreach ($chapters as $chapter) {
+            $urls = array($chapter->url);
+            foreach ($urls as $url) {
+                    $client = new Client();
+                    try{
+                    $crawler = $client->request('GET', $url);
+                }catch (TransportException $e){
+                        Log::info($e);
+                        return true;
+                    }
+                    $crawler->filter('div#wrap')->each(
+                        function (Crawler $node) use ($chapter) {
+                            $chapter_id = Chapter::where('url', $chapter->url)->value('id');
+                            $content = $node->filter('div.chapter-c')->text();
+                            $chap = Content::where('chapter_id', $chapter_id)->first();
+                            if (!$chap) {
+                                $chap = new Content();
+                                $chap->content = $content;
+                                $chap->chapter_id = $chapter_id;
+                                $chap->save();
+                            }
+                        }
+
+                    );
+
+            }
+        }
     }
 
     public function scrape_story()
     {
         $categories = Category::all();
         foreach ($categories as $category) {
-            for ($k = 1; $k <= 380; $k++) {
-                $urls = [$category->url . 'trang-' . $k . '/'];
+                $urls = [$category->url. 'trang-3'];
                     foreach ($urls as $url) {
                         try {
                             $client = new Client();
@@ -82,15 +81,17 @@ class truyenfullVn
                                 Log::info($e);
                                 return true;
                             }
-                            $crawler->filter('h3.truyen-title')->each(
+                            $crawler->filter('div.col-xs-7')->each(
                                 function (Crawler $node) {
-                                    $name = $node->filter('a')->attr('title');
-                                    $url = $node->filter('a')->attr('href');
+                                    $name = $node->filter('h3.truyen-title a')->attr('title');
+                                    $url = $node->filter('h3.truyen-title a')->attr('href');
+                                    $author=$node->filter('span[itemprop="author"]')->text();
                                     $story = Story::where('url', $url)->first();
                                     if (!$story) {
                                         $story = new Story();
                                         $story->name = $name;
                                         $story->url = $url;
+                                        $story->author=$author;
                                         $story->save();
                                     }
                                 }
@@ -102,7 +103,6 @@ class truyenfullVn
                     }
             }
         }
-    }
 
     public function scrape_chapter()
     {
@@ -185,8 +185,8 @@ class truyenfullVn
 //        }
                 $categories = Category::all();
         foreach ($categories as $category) {
-            for ($k = 1; $k <= 380; $k++) {
-                $urls = [$category->url . 'trang-' . $k . '/'];
+
+                $urls = [$category->url.'trang-3'];
                 try {
                     foreach ($urls as $url) {
                         try {
@@ -227,7 +227,6 @@ class truyenfullVn
                     return true;
                 }
             }
-        }
         }
 }
 

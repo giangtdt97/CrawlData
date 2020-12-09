@@ -3837,9 +3837,11 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Rate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Rate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/Story.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Story.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Rate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Rate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Story.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Story.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_19_025016_add_thumbnail_img_to_rates_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_19_025016_add_thumbnail_img_to_rates_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../larastart" beforeDir="false" afterPath="$PROJECT_DIR$/../larastart" afterDir="false" />
@@ -3997,7 +3999,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../agape" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -4225,7 +4227,14 @@
       <workItem from="1607414520933" duration="413000" />
       <workItem from="1607482357856" duration="1384000" />
       <workItem from="1607483783086" duration="1795000" />
-      <workItem from="1607485596907" duration="89000" />
+      <workItem from="1607485596907" duration="301000" />
+      <workItem from="1607485912207" duration="34000" />
+      <workItem from="1607486199299" duration="106000" />
+      <workItem from="1607500037562" duration="1792000" />
+      <workItem from="1607501858873" duration="1716000" />
+      <workItem from="1607503685609" duration="1828000" />
+      <workItem from="1607505583190" duration="630000" />
+      <workItem from="1607507392673" duration="878000" />
     </task>
     <servers />
   </component>
@@ -4257,10 +4266,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1605755311246" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1607484481233">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1607486304195">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1607484481233" />
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1607486304195" />
     <state x="523" y="155" key="NewPhpClassDialog" timestamp="1605517005916">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

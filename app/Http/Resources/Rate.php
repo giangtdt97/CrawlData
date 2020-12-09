@@ -19,6 +19,7 @@ class Rate extends JsonResource
             'rating'=>$this->rating,
             'rating_count'=>$this->rating_count,
             'description'=>$this->description,
+            'thumbnail_image'=>$this->thumbnail_img,
 
         ];
     }

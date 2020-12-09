@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Rate extends Model
 {
-    use HasFactory;
+    public function stories()
+    {
+        return $this->hasOne(Story::class,'story_id');
+    }
 }

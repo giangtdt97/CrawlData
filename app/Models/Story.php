@@ -23,4 +23,8 @@ class Story extends Model
     {
         return $this->belongsToMany(Category::class, 'category_stories');
     }
+    public function rates()
+    {
+        return $this->hasOne(Rate::class,'story_id');
+    }
 }
