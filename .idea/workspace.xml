@@ -11,8 +11,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9c361e2-0637-4dcf-aef0-e5125165bcbe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/htdocs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PhpProject/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VuejsTrans/.idea/VuejsTrans.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog/.idea/blog.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../landing-page-app-fitness/.idea/landing-page-app-fitness.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../landingpage/.idea/landingpage.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../laravel-file-upload/.idea/laravel-file-upload.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/.idea/test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../translate-language/.idea/translate-language.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BanabaTech/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FoodKhang" beforeDir="false" afterPath="$PROJECT_DIR$/../FoodKhang" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhpProject/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpProject/search.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TestBlade/.editorconfig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TestBlade/.env.example" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TestBlade/.gitattributes" beforeDir="false" />
@@ -3827,21 +3837,9 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.rnd" beforeDir="false" afterPath="$PROJECT_DIR$/.rnd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ChapterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ChapterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Chapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Chapter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Rate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Rate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/Story.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Story.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Chapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Chapter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Story.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Story.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_26_063002_create_stories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_26_063002_create_stories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_26_065638_add_foreign_key_to_stories_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_035407_create_rates_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_035407_create_rates_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_19_025016_add_thumbnail_img_to_rates_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_19_025016_add_thumbnail_img_to_rates_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../larastart" beforeDir="false" afterPath="$PROJECT_DIR$/../larastart" afterDir="false" />
@@ -4207,7 +4205,27 @@
       <workItem from="1606293496917" duration="1677000" />
       <workItem from="1606295626943" duration="1115000" />
       <workItem from="1606297339492" duration="1355000" />
-      <workItem from="1606299170124" duration="480000" />
+      <workItem from="1606299170124" duration="1866000" />
+      <workItem from="1606356443252" duration="16528000" />
+      <workItem from="1606373101947" duration="1872000" />
+      <workItem from="1606375266234" duration="957000" />
+      <workItem from="1606378329752" duration="1536000" />
+      <workItem from="1606381376618" duration="69000" />
+      <workItem from="1606386139407" duration="33000" />
+      <workItem from="1606450907384" duration="146000" />
+      <workItem from="1606460088926" duration="128000" />
+      <workItem from="1606469388320" duration="329000" />
+      <workItem from="1606797019760" duration="1007000" />
+      <workItem from="1606798043618" duration="62000" />
+      <workItem from="1606798290359" duration="277000" />
+      <workItem from="1606798835512" duration="215000" />
+      <workItem from="1606803889967" duration="102000" />
+      <workItem from="1606879964469" duration="601000" />
+      <workItem from="1606881372024" duration="480000" />
+      <workItem from="1607414520933" duration="413000" />
+      <workItem from="1607482357856" duration="1384000" />
+      <workItem from="1607483783086" duration="1795000" />
+      <workItem from="1607485596907" duration="89000" />
     </task>
     <servers />
   </component>
@@ -4239,10 +4257,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1605755311246" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1606279111095">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1607484481233">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1606279111095" />
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1607484481233" />
     <state x="523" y="155" key="NewPhpClassDialog" timestamp="1605517005916">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

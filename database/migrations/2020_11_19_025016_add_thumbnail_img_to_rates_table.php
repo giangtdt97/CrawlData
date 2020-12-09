@@ -25,8 +25,8 @@ class AddThumbnailImgToRatesTable extends Migration
      */
     public function down()
     {
-//        Schema::table('rates', function (Blueprint $table) {
-//            //
-//        });
+        Schema::table('rates', function (Blueprint $table) {
+            //
+        });
     }
 }
