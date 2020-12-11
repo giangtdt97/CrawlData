@@ -3837,10 +3837,8 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Rate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Rate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/Story.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Story.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Rate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Rate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Story.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Story.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" />
@@ -4235,6 +4233,20 @@
       <workItem from="1607503685609" duration="1828000" />
       <workItem from="1607505583190" duration="630000" />
       <workItem from="1607507392673" duration="878000" />
+      <workItem from="1607509244692" duration="1059000" />
+      <workItem from="1607511185369" duration="611000" />
+      <workItem from="1607568964757" duration="1790000" />
+      <workItem from="1607570818088" duration="1366000" />
+      <workItem from="1607572711683" duration="1171000" />
+      <workItem from="1607574537489" duration="1407000" />
+      <workItem from="1607576350665" duration="457000" />
+      <workItem from="1607580565233" duration="1265000" />
+      <workItem from="1607581901945" duration="1785000" />
+      <workItem from="1607583700486" duration="1850000" />
+      <workItem from="1607585609147" duration="1061000" />
+      <workItem from="1607591035354" duration="1829000" />
+      <workItem from="1607593708408" duration="3691000" />
+      <workItem from="1607673186309" duration="358000" />
     </task>
     <servers />
   </component>

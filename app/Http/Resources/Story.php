@@ -18,8 +18,9 @@ class Story extends JsonResource
         return [
             'id'=>$this->id,
             'name' => $this->name,
-            'total chapter'=>$this->chapters()->count(),
             'author'=>$this->author,
+            'total chapter'=>$this->chapters()->count(),
+            'created_date'=>$this->created_at
         ];
     }
 }
