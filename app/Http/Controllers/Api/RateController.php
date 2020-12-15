@@ -39,7 +39,7 @@ class RateController extends Controller
         return new RateResource($rate);
     }
     public function getStories($id){
-        $stories = Story::findorFail($id)->rates();
+        $stories = Story::find($id)->rates()->get();
 
         return RateResource::collection($stories);
     }
