@@ -22,7 +22,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $data = Category::paginate(15);
+        $data = Category::all();
 //        $payload = Crypt::encrypt($data);
         return
             CategoryResource::collection($data);

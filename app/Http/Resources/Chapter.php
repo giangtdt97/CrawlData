@@ -18,6 +18,7 @@ class Chapter extends JsonResource
             'storyId'=>$this->story_id,
             'title' => $this->title,
             'contents'=>$this->contents,
+            ''
         ];
     }
 }

@@ -3837,9 +3837,8 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Story.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Story.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/RateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/RateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Chapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Chapter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../larastart" beforeDir="false" afterPath="$PROJECT_DIR$/../larastart" afterDir="false" />
@@ -4246,7 +4245,12 @@
       <workItem from="1607585609147" duration="1061000" />
       <workItem from="1607591035354" duration="1829000" />
       <workItem from="1607593708408" duration="3691000" />
-      <workItem from="1607673186309" duration="358000" />
+      <workItem from="1607673186309" duration="2112000" />
+      <workItem from="1607676511942" duration="16000" />
+      <workItem from="1607931935591" duration="41000" />
+      <workItem from="1607931988206" duration="38000" />
+      <workItem from="1607934858225" duration="21000" />
+      <workItem from="1608013256384" duration="835000" />
     </task>
     <servers />
   </component>
@@ -4274,14 +4278,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="422" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1603335026273" />
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605755311246">
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608013300695">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1605755311246" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1607486304195">
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1608013300695" />
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1607934877164">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1607486304195" />
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1607934877164" />
     <state x="523" y="155" key="NewPhpClassDialog" timestamp="1605517005916">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

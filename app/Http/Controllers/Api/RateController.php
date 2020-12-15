@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 
 use App\Models\Rate;
+use App\Models\Story;
 use Illuminate\Http\Request;
 use App\Http\Resources\Rate as RateResource;
 
@@ -36,5 +37,10 @@ class RateController extends Controller
     public function show(Rate $rate)
     {
         return new RateResource($rate);
+    }
+    public function getStories($id){
+        $stories = Story::findorFail($id)->rates();
+
+        return RateResource::collection($stories);
     }
 }
