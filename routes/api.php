@@ -42,5 +42,5 @@ Route::group([
 });
 Route::post('search', [SearchController::class,'search']);
 Route::get('categories/{category}/stories', [CategoryController::class ,'getStories']);
-Route::get('rates/{story_id}/stories', [RateController::class ,'getStories']);
+Route::get('stories/{story_id}/detail', [RateController::class ,'getStories']);
 Route::get('stories/{story}/chapters', [StoryController::class ,'getChapters']);
