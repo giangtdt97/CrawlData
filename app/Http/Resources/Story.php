@@ -20,7 +20,7 @@ class Story extends JsonResource
             'name' => $this->name,
             'author'=>$this->author,
             'total chapter'=>$this->chapters()->count(),
-            'created_date'=>$this->created_at
+            'created_date'=>$this->created_at,
         ];
     }
 }

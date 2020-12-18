@@ -18,19 +18,18 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index()
     {
         $data = Category::all();
-//        $payload = Crypt::encrypt($data);
+        $payload = Crypt::encrypt($data);
         return
-            CategoryResource::collection($data);
-//        response()->json([
-//            'status' => 200,
-//            'message' => 'success',
-//            'data' => $payload
-//        ],Response::HTTP_OK);
+            response()->json([
+                'status' => 200,
+                'message' => 'success',
+                'data' => $payload
+            ],Response::HTTP_OK);
     }
     /**
      * Display the specified resource.
@@ -45,7 +44,14 @@ class CategoryController extends Controller
     public function getStories($id){
         $stories = Category::findorFail($id)->stories()->paginate(15);
 
-        return StoryResource::collection($stories);
-    }
 
+//            StoryResource::collection($stories);
+            $payload = Crypt::encrypt($stories);
+        return
+            response()->json([
+                'status' => 200,
+                'message' => 'success',
+                'data' => $payload
+            ],Response::HTTP_OK);
+    }
 }

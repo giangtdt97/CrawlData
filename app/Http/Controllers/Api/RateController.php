@@ -6,27 +6,29 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Rate;
 use App\Models\Story;
+use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 use App\Http\Resources\Rate as RateResource;
+use Illuminate\Support\Facades\Crypt;
 
 class RateController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index()
     {
         $data = Rate::paginate(15);
-//        $payload = Crypt::encrypt($data);
+        $payload = Crypt::encrypt($data);
         return
-            RateResource::collection($data);
-//        response()->json([
-//            'status' => 200,
-//            'message' => 'success',
-//            'data' => $payload
-//        ],Response::HTTP_OK);
+//            RateResource::collection($data);
+        response()->json([
+            'status' => 200,
+            'message' => 'success',
+            'data' => $payload
+        ],Response::HTTP_OK);
     }
     /**
      * Display the specified resource.
@@ -40,7 +42,13 @@ class RateController extends Controller
     }
     public function getStories($id){
         $stories = Story::find($id)->rates()->get();
-
-        return RateResource::collection($stories);
+        $payload = Crypt::encrypt($stories);
+        return
+//            RateResource::collection($stories);
+            response()->json([
+                'status' => 200,
+                'message' => 'success',
+                'data' => $payload
+            ],Response::HTTP_OK);
     }
 }

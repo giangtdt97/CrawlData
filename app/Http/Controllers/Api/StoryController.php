@@ -15,18 +15,20 @@ class StoryController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index()
     {
         $data = Story::paginate(10);
-        return StoryResource::collection($data);
-//        $payload = Crypt::encrypt($data);
-//        response()->json([
-//            'status' => 200,
-//            'message' => 'success',
-//            'data' => $payload
-//        ],Response::HTTP_OK);
+
+
+        $payload = Crypt::encrypt($data);
+        return
+            response()->json([
+            'status' => 200,
+            'message' => 'success',
+            'data' => $payload
+        ],Response::HTTP_OK);
     }
 
     /**
@@ -77,7 +79,25 @@ class StoryController extends Controller
     }
     public function getChapters($id){
         $chapters = Story::find($id)->chapters()->get();
+        $payload = Crypt::encrypt($chapters);
+        return
+//            ChapterResource::collection($chapters);
+            response()->json([
+                'status' => 200,
+                'message' => 'success',
+                'data' => $payload
+            ],Response::HTTP_OK);
+    }
+    public function getDetail(){
+        $stories = Story::with('rates')->get();
+        $payload = Crypt::encrypt($stories);
+        return
+//            StoryResource::collection($stories);
+            response()->json([
+                'status' => 200,
+                'message' => 'success',
+                'data' => $payload
+            ],Response::HTTP_OK);
 
-        return ChapterResource::collection($chapters);
     }
 }
