@@ -23,7 +23,8 @@ class CategoryController extends Controller
     public function index()
     {
         $data = Category::all();
-        $payload = Crypt::encrypt($data);
+        $getResource=CategoryResource::collection($data);
+        $payload = Crypt::encrypt($getResource);
         return
             response()->json([
                 'status' => 200,
@@ -43,10 +44,8 @@ class CategoryController extends Controller
     }
     public function getStories($id){
         $stories = Category::findorFail($id)->stories()->paginate(15);
-
-
-//            StoryResource::collection($stories);
-            $payload = Crypt::encrypt($stories);
+        $getResource=StoryResource::collection($stories);
+        $payload = Crypt::encrypt($getResource);
         return
             response()->json([
                 'status' => 200,

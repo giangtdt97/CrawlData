@@ -21,9 +21,9 @@ class RateController extends Controller
     public function index()
     {
         $data = Rate::paginate(15);
-        $payload = Crypt::encrypt($data);
+        $getResource=RateResource::collection($data);
+        $payload = Crypt::encrypt($getResource);
         return
-//            RateResource::collection($data);
         response()->json([
             'status' => 200,
             'message' => 'success',
@@ -42,9 +42,9 @@ class RateController extends Controller
     }
     public function getStories($id){
         $stories = Story::find($id)->rates()->get();
-        $payload = Crypt::encrypt($stories);
+        $getResource=RateResource::collection($stories);
+        $payload = Crypt::encrypt($getResource);
         return
-//            RateResource::collection($stories);
             response()->json([
                 'status' => 200,
                 'message' => 'success',

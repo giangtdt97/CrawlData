@@ -20,9 +20,8 @@ class StoryController extends Controller
     public function index()
     {
         $data = Story::paginate(10);
-
-
-        $payload = Crypt::encrypt($data);
+        $getResource=StoryResource::collection($data);
+        $payload = Crypt::encrypt($getResource);
         return
             response()->json([
             'status' => 200,
@@ -79,9 +78,9 @@ class StoryController extends Controller
     }
     public function getChapters($id){
         $chapters = Story::find($id)->chapters()->get();
-        $payload = Crypt::encrypt($chapters);
+        $getResource=ChapterResource::collection($chapters);
+        $payload = Crypt::encrypt($getResource);
         return
-//            ChapterResource::collection($chapters);
             response()->json([
                 'status' => 200,
                 'message' => 'success',
@@ -90,9 +89,9 @@ class StoryController extends Controller
     }
     public function getDetail(){
         $stories = Story::with('rates')->get();
-        $payload = Crypt::encrypt($stories);
+        $getResource=StoryResource::collection($stories);
+        $payload = Crypt::encrypt($getResource);
         return
-//            StoryResource::collection($stories);
             response()->json([
                 'status' => 200,
                 'message' => 'success',
