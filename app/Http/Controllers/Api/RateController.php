@@ -16,19 +16,19 @@ class RateController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()
     {
         $data = Rate::paginate(15);
         $getResource=RateResource::collection($data);
         $payload = Crypt::encrypt($getResource);
-        return
-        response()->json([
-            'status' => 200,
-            'message' => 'success',
-            'data' => $payload
-        ],Response::HTTP_OK);
+        return $getResource;
+//        response()->json([
+//            'status' => 200,
+//            'message' => 'success',
+//            'data' => $payload
+//        ],Response::HTTP_OK);
     }
     /**
      * Display the specified resource.
@@ -44,11 +44,11 @@ class RateController extends Controller
         $stories = Story::find($id)->rates()->get();
         $getResource=RateResource::collection($stories);
         $payload = Crypt::encrypt($getResource);
-        return
-            response()->json([
-                'status' => 200,
-                'message' => 'success',
-                'data' => $payload
-            ],Response::HTTP_OK);
+        return $getResource;
+//            response()->json([
+//                'status' => 200,
+//                'message' => 'success',
+//                'data' => $payload
+//            ],Response::HTTP_OK);
     }
 }

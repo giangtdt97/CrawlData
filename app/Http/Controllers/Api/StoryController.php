@@ -15,19 +15,19 @@ class StoryController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()
     {
         $data = Story::paginate(10);
         $getResource=StoryResource::collection($data);
         $payload = Crypt::encrypt($getResource);
-        return
-            response()->json([
-            'status' => 200,
-            'message' => 'success',
-            'data' => $payload
-        ],Response::HTTP_OK);
+        return $getResource;
+//            response()->json([
+//            'status' => 200,
+//            'message' => 'success',
+//            'data' => $payload
+//        ],Response::HTTP_OK);
     }
 
     /**
@@ -80,23 +80,23 @@ class StoryController extends Controller
         $chapters = Story::find($id)->chapters()->get();
         $getResource=ChapterResource::collection($chapters);
         $payload = Crypt::encrypt($getResource);
-        return
-            response()->json([
-                'status' => 200,
-                'message' => 'success',
-                'data' => $payload
-            ],Response::HTTP_OK);
+        return $getResource;
+//            response()->json([
+//                'status' => 200,
+//                'message' => 'success',
+//                'data' => $payload
+//            ],Response::HTTP_OK);
     }
     public function getDetail(){
         $stories = Story::with('rates')->get();
         $getResource=StoryResource::collection($stories);
         $payload = Crypt::encrypt($getResource);
-        return
-            response()->json([
-                'status' => 200,
-                'message' => 'success',
-                'data' => $payload
-            ],Response::HTTP_OK);
+        return $getResource;
+//            response()->json([
+//                'status' => 200,
+//                'message' => 'success',
+//                'data' => $payload
+//            ],Response::HTTP_OK);
 
     }
 }
