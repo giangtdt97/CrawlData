@@ -14,20 +14,20 @@ class ChapterController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index()
     {
-//        $data = Chapter::with('contents')->get();
-//        return  ChapterResource::collection($data);
-//        $payload = Crypt::encrypt($data);
-//        return response()->json([
-//            'status' => 200,
-//            'message' => 'success',
-//            'data' => $payload
-//        ],Response::HTTP_OK);
         $chapters= Chapter::with('contents')->get();
-        return  ChapterResource::collection($chapters);
+        $getResource=ChapterResource::collection($chapters);
+        $payload = Crypt::encrypt($getResource);
+        return
+//            $getResource;
+            response()->json([
+                'status' => 200,
+                'message' => 'success',
+                'data' => $payload
+            ],Response::HTTP_OK);
     }
 
     /**
