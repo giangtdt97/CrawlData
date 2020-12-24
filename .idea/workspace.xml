@@ -3996,7 +3996,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FoodKhang" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -4266,6 +4266,7 @@
       <workItem from="1608283002957" duration="1798000" />
       <workItem from="1608287864687" duration="1822000" />
       <workItem from="1608517953759" duration="59000" />
+      <workItem from="1608776619347" duration="555000" />
     </task>
     <servers />
   </component>
