@@ -80,12 +80,13 @@ class StoryController extends Controller
         $chapters = Story::find($id)->chapters()->get();
         $getResource=ChapterResource::collection($chapters);
         $payload = Crypt::encrypt($getResource);
-        return $getResource;
-//            response()->json([
-//                'status' => 200,
-//                'message' => 'success',
-//                'data' => $payload
-//            ],Response::HTTP_OK);
+        return
+//            $getResource;
+            response()->json([
+                'status' => 200,
+                'message' => 'success',
+                'data' => $payload
+            ],Response::HTTP_OK);
     }
     public function getDetail(){
         $stories = Story::with('rates')->get();
