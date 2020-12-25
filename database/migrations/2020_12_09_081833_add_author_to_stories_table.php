@@ -15,6 +15,7 @@ class AddAuthorToStoriesTable extends Migration
     {
         Schema::table('stories', function (Blueprint $table) {
             $table->string('author')->after('name');
+//            $table->longText('thumbnail_img')->nullable()->after('author');
         });
     }
 

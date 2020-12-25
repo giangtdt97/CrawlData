@@ -16,7 +16,7 @@ class Chapter extends JsonResource
     {
         return [
             'title' => $this->title,
-            'contents'=>encrypt($this->contents),
+            'contents'=>$this->contents,
         ];
     }
 }

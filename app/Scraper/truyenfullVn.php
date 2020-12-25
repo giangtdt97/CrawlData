@@ -24,7 +24,7 @@ class truyenfullVn
         $url = 'https://truyenfull.vn/';
         $client = new Client();
         $crawler = $client->request('GET', $url);
-        $crawler->filter('div.col-xs-6')->each(
+        $crawler->filter('ul.control.nav.navbar-nav  div.col-md-4 ul.dropdown-menu li')->each(
             function (Crawler $node) {
                 $name = $node->filter('a')->attr('title');
                 $url = $node->filter('a')->attr('href');
@@ -43,7 +43,7 @@ class truyenfullVn
     {
         $categories = Category::all();
         foreach ($categories as $category) {
-            for($k = 1; $k <= 400; $k++){
+            for($k = 1; $k <= 1; $k++){
             $urls = [$category->url. 'trang-'.$k];
             foreach ($urls as $url) {
                 try {
@@ -54,17 +54,19 @@ class truyenfullVn
                         Log::info($e);
                         return true;
                     }
-                    $crawler->filter('div.col-xs-7')->each(
+                    $crawler->filter('div.col-xs-12.col-sm-12.col-md-9.col-truyen-main div.list.list-truyen.col-xs-12 div.row')->each(
                         function (Crawler $node) {
                             $name = $node->filter('h3.truyen-title a')->attr('title');
                             $url = $node->filter('h3.truyen-title a')->attr('href');
                             $author=$node->filter('span[itemprop="author"]')->text();
+//                            $thumbnail=$node->filter('img.cover')->attr('src');
                             $story = Story::where('url', $url)->first();
                             if (!$story) {
                                 $story = new Story();
                                 $story->name = $name;
                                 $story->url = $url;
                                 $story->author=$author;
+//                                $story->thumbnail_img=$thumbnail;
                                 $story->save();
                             }
                         }
