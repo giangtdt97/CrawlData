@@ -26,7 +26,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::apiResource('categories', CategoryController::class)->only('index','show');
 Route::apiResource('stories', StoryController::class)->only('index','show');
 Route::apiResource('chapters', ChapterController::class)->only('index','show');
-Route::apiResource('rates', RateController::class)->only('index','show');
+Route::apiResource('rates', RateController::class)->only('index','show','getBestRating');
 Route::group([
     'prefix' => 'auth'
 ], function () {
@@ -41,8 +41,8 @@ Route::group([
     });
 });
 Route::post('search', [SearchController::class,'search']);
-Route::get('categories/decode', [CategoryController::class ,'decode']);
 Route::get('categories/{category}/stories', [CategoryController::class ,'getStories']);
 Route::get('stories/{story_id}/detail', [RateController::class ,'getStories']);
+Route::get('rates/rating', [RateController::class ,'getBestRating']);
 Route::get('stories/{story}/chapters', [StoryController::class ,'getChapters']);
 Route::get('stories/{story_id}/details', [StoryController::class ,'getDetail']);

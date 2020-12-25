@@ -3838,10 +3838,9 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Story.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Story.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/RateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/RateController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_09_081833_add_author_to_stories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_09_081833_add_author_to_stories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../larastart" beforeDir="false" afterPath="$PROJECT_DIR$/../larastart" afterDir="false" />
@@ -4000,7 +3999,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../agape" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -4282,6 +4281,8 @@
       <workItem from="1608868672675" duration="1803000" />
       <workItem from="1608870495012" duration="1675000" />
       <workItem from="1608878686011" duration="71000" />
+      <workItem from="1608884072349" duration="16000" />
+      <workItem from="1608884933610" duration="2409000" />
     </task>
     <servers />
   </component>
@@ -4299,35 +4300,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="395" y="111" key="#Inspections" timestamp="1605502860334">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="395" y="111" key="#Inspections/0.0.1536.864@0.0.1536.864" timestamp="1605502860334" />
-    <state x="422" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603335026273">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="422" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1603335026273" />
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608803406723">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1608803406723" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1608864575339">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1608864575339" />
-    <state x="523" y="155" key="NewPhpClassDialog" timestamp="1605517005916">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="523" y="155" key="NewPhpClassDialog/0.0.1536.864@0.0.1536.864" timestamp="1605517005916" />
-    <state x="604" y="356" key="NewPhpFileDialog" timestamp="1608280719969">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="604" y="356" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1608280719969" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1603269128950">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1603269128950" />
   </component>
 </project>
