@@ -51,8 +51,8 @@ class RateController extends Controller
 //                'data' => $payload
 //            ],Response::HTTP_OK);
     }
-    public function getBestRating(){
-        $data =Rate::where('rating','>=',8.0)->get();
+    public function getRatingCount(){
+        $data =Rate::where('rating_count','>=',100)->paginate(20);
         return RateResource::collection($data);
     }
 }

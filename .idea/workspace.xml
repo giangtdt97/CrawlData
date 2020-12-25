@@ -3839,7 +3839,7 @@
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/RateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/RateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Chapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Chapter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" />
@@ -4282,7 +4282,7 @@
       <workItem from="1608870495012" duration="1675000" />
       <workItem from="1608878686011" duration="71000" />
       <workItem from="1608884072349" duration="16000" />
-      <workItem from="1608884933610" duration="2409000" />
+      <workItem from="1608884933610" duration="3876000" />
     </task>
     <servers />
   </component>

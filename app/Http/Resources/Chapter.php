@@ -16,6 +16,7 @@ class Chapter extends JsonResource
     {
         return [
             'title' => $this->title,
+            'created_at'=>$this->created_at,
             'contents'=>$this->contents,
         ];
     }
