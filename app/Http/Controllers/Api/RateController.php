@@ -20,7 +20,7 @@ class RateController extends Controller
      */
     public function index()
     {
-        $data = Rate::where('rating','>=',8.0)->get();
+        $data = Rate::where('rating','>=',8.0)->paginate(20);
         $getResource=RateResource::collection($data);
         $payload = Crypt::encrypt($getResource);
         return $getResource;
