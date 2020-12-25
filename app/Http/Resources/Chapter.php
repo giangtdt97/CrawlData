@@ -3,7 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-
+use App\Http\Resources\Content as ContentResource;
 class Chapter extends JsonResource
 {
     /**
@@ -18,7 +18,6 @@ class Chapter extends JsonResource
             'storyId'=>$this->story_id,
             'title' => $this->title,
             'contents'=>$this->contents,
-            ''
         ];
     }
 }

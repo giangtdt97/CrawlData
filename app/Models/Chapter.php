@@ -14,7 +14,7 @@ class Chapter extends Model
     }
     public function contents()
     {
-        return $this->hasOne(Content::class,'chapter_id');
+        return $this->hasOne(Content::class,'chapter_id','chapter_id');
     }
 
 }

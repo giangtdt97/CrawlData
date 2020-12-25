@@ -7,6 +7,7 @@ use App\Models\Chapter;
 use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 use App\Http\Resources\Chapter as ChapterResource;
+use App\Http\Resources\Content as ContentResource;
 use Illuminate\Support\Facades\Crypt;
 
 class ChapterController extends Controller
@@ -14,7 +15,7 @@ class ChapterController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()
     {
@@ -22,12 +23,12 @@ class ChapterController extends Controller
         $getResource=ChapterResource::collection($chapters);
         $payload = Crypt::encrypt($getResource);
         return
-//            $getResource;
-            response()->json([
-                'status' => 200,
-                'message' => 'success',
-                'data' => $payload
-            ],Response::HTTP_OK);
+           $getResource;
+//            response()->json([
+//                'status' => 200,
+//                'message' => 'success',
+//                'data' => $payload
+//            ],Response::HTTP_OK);
     }
 
     /**
