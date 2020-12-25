@@ -15,9 +15,8 @@ class Chapter extends JsonResource
     public function toArray($request)
     {
         return [
-            'storyId'=>$this->story_id,
             'title' => $this->title,
-            'contents'=>$this->contents,
+            'contents'=>encrypt($this->contents),
         ];
     }
 }

@@ -53,29 +53,6 @@ class StoryController extends Controller
     {
         return new StoryResource($story);
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return bool
-     */
-    public function update(Request $request, Story $story)
-    {
-        return $story->update($request->all());
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy( Story $story)
-    {
-        $story->delete();
-    }
     public function getChapters($id){
         $chapters = Story::find($id)->chapters()->get();
         $getResource=ChapterResource::collection($chapters);
