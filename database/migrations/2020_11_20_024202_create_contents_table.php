@@ -13,12 +13,12 @@ class CreateContentsTable extends Migration
      */
     public function up()
     {
-//        Schema::create('contents', function (Blueprint $table) {
-//            $table->id();
-//            $table->bigInteger('chapter_id')->unsigned();
-//            $table->longText('content');
-//            $table->timestamps();
-//        });
+        Schema::create('contents', function (Blueprint $table) {
+            $table->id();
+            $table->bigInteger('chapter_id')->unsigned();
+            $table->longText('content');
+            $table->timestamps();
+        });
     }
 
     /**

@@ -11,12 +11,12 @@ class AddForgeinKeyToContentTable extends Migration
      *
      * @return void
      */
-//    public function up()
-//    {
-//        Schema::table('contents', function (Blueprint $table) {
-//            $table->foreign('chapter_id')->references('id')->on('chapters');
-//        });
-//    }
+    public function up()
+    {
+        Schema::table('contents', function (Blueprint $table) {
+            $table->foreign('chapter_id')->references('id')->on('chapters');
+        });
+    }
 
     /**
      * Reverse the migrations.
