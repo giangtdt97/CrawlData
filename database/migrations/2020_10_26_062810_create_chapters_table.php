@@ -18,6 +18,7 @@ class CreateChaptersTable extends Migration
             $table->bigInteger('story_id')->unsigned();
             $table->string('title');
             $table->string('url');
+            $table->longText('content')->nullable();
             $table->timestamps();
         });
     }

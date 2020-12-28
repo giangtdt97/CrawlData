@@ -3838,9 +3838,10 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/RateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/RateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Chapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Chapter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_26_062810_create_chapters_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_26_062810_create_chapters_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_20_024202_create_contents_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_20_024202_create_contents_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_25_025115_add_forgein_key_to_content_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_25_025115_add_forgein_key_to_content_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../larastart" beforeDir="false" afterPath="$PROJECT_DIR$/../larastart" afterDir="false" />
@@ -4282,7 +4283,8 @@
       <workItem from="1608870495012" duration="1675000" />
       <workItem from="1608878686011" duration="71000" />
       <workItem from="1608884072349" duration="16000" />
-      <workItem from="1608884933610" duration="3876000" />
+      <workItem from="1608884933610" duration="5244000" />
+      <workItem from="1609122306908" duration="1116000" />
     </task>
     <servers />
   </component>

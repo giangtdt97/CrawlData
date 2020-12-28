@@ -15,6 +15,7 @@ class Chapter extends JsonResource
     public function toArray($request)
     {
         return [
+            'story_id'=>$this->story_id,
             'title' => $this->title,
             'created_at'=>$this->created_at,
             'contents'=>$this->contents,
