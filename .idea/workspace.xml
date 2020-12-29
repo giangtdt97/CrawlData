@@ -17,6 +17,7 @@
       <change afterPath="$PROJECT_DIR$/../blog/.idea/blog.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../landing-page-app-fitness/.idea/landing-page-app-fitness.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../landingpage/.idea/landingpage.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../landingpage/resources/views/app-tool-index/app_love-counter.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../laravel-file-upload/.idea/laravel-file-upload.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/.idea/test.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../translate-language/.idea/translate-language.iml" afterDir="false" />
@@ -3998,7 +3999,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../landingpage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../agape" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -4284,6 +4285,7 @@
       <workItem from="1608884933610" duration="5244000" />
       <workItem from="1609122306908" duration="14918000" />
       <workItem from="1609208630306" duration="6061000" />
+      <workItem from="1609215724056" duration="6413000" />
     </task>
     <servers />
   </component>

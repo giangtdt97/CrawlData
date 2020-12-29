@@ -20,7 +20,7 @@ class Chapter extends JsonResource
             'story_id'=>$this->story_id,
             'title' => $this->title,
             'created_at'=>$this->created_at,
-            'contents'=>Crypt::encrypt($this->content),
+            'contents'=>$this->content,
         ];
     }
 }
