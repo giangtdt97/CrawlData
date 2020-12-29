@@ -41,36 +41,48 @@ class truyenfullVn
 
     public function scrape_story()
     {
-        $categories = Category::all();
-        foreach ($categories as $category) {
-            for($k = 1; $k <= 380; $k++){
-                $urls = [$category->url. 'trang-'.$k];
-                foreach ($urls as $url) {
-                        $client = new Client();
-                        try{
-                            $crawler = $client->request('GET', $url);
-                        }catch (TransportException $e){
-                            Log::info($e);
-                            return true;
-                        }
-                        $crawler->filter('div.col-xs-12.col-sm-12.col-md-9.col-truyen-main div.list.list-truyen.col-xs-12 div.row')->each(
-                            function (Crawler $node) {
-                                $name = $node->filter('h3.truyen-title a')->attr('title');
-                                $url = $node->filter('h3.truyen-title a')->attr('href');
-                                $author=$node->filter('span[itemprop="author"]')->text();
-                                $story = Story::where('url', $url)->first();
-                                if (!$story) {
-                                    $story = new Story();
-                                    $story->name = $name;
-                                    $story->url = $url;
-                                    $story->author=$author;
-                                    $story->save();
-                                }
-                            }
-                        );
-                    }
+//        $categories = Category::all();
+//        foreach ($categories as $category) {
+//            for($k = 1; $k <= 380; $k++){
+//                $urls = [$category->url. 'trang-'.$k];
+//                foreach ($urls as $url) {
+//                        $client = new Client();
+//                        try{
+//                            $crawler = $client->request('GET', $url);
+//                        }catch (TransportException $e){
+//                            Log::info($e);
+//                            return true;
+//                        }
+//                        $crawler->filter('div.col-xs-12.col-sm-12.col-md-9.col-truyen-main div.list.list-truyen.col-xs-12 div.row')->each(
+//                            function (Crawler $node) {
+//                                $name = $node->filter('h3.truyen-title a')->attr('title');
+//                                $url = $node->filter('h3.truyen-title a')->attr('href');
+//                                $author=$node->filter('span[itemprop="author"]')->text();
+//                                $story = Story::where('url', $url)->first();
+//                                if (!$story) {
+//                                    $story = new Story();
+//                                    $story->name = $name;
+//                                    $story->url = $url;
+//                                    $story->author=$author;
+//                                    $story->save();
+//                                }
+//                            }
+//                        );
+//                    }
+//                }
+//            }
+                $stories = Story::all();
+        foreach ($stories as $story) {
+            $client = new Client();
+            $crawler = $client->request('GET', $story->url);
+            $crawler->filter('div.col-xs-12.col-info-desc')->each(
+                function (Crawler $node) use ($story) {
+                    $story_id = Story::where('url', $story->url)->value('id');
+                    $thumbnail=$node->filter('img[itemprop="image"]')->attr('src');
+                    Story::where('id', $story_id)->update(['thumbnail_img'=>$thumbnail]);
                 }
-            }
+                );
+        }
         }
 
     public function scrape_chapter()
@@ -79,7 +91,12 @@ class truyenfullVn
         foreach ($stories as $story) {
             for ($k = 1; $k <= 100; $k++) {
                 $client = new Client();
-                $crawler = $client->request('GET', $story->url . 'trang-' . $k . '/#list-chapter');
+                try {
+                    $crawler = $client->request('GET', $story->url . 'trang-' . $k . '/#list-chapter');
+                } catch (TransportException $e) {
+                    Log::info($e);
+                    return true;
+                }
                 $crawler->filter('div.col-xs-12.col-sm-6.col-md-6 li')->each(
                     function (Crawler $node) use ($story) {
                         $story_id = Story::where('url', $story->url)->value('id');
@@ -126,6 +143,7 @@ class truyenfullVn
 //                        $rate->description = $description;
 //                        $rate->save();
 //                    }
+//                    Story::where('id', $story_id)->update(['thumbnail_img'=>$thumbnail]);
 //                }
 //                );
 //        }
