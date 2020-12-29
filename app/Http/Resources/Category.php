@@ -17,7 +17,7 @@ class Category extends JsonResource
     {
         return [
             'id'=>$this->id,
-            'name' => Crypt::encrypt($this->name),
+            'name' =>$this->name,
             'total story' =>$this->stories()->count(),
         ];
     }
