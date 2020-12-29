@@ -20,7 +20,7 @@ class Story extends JsonResource
             'name' => $this->name,
             'author'=>$this->author,
             'total chapter'=>$this->chapters()->count(),
-            'image'=>$this->thumnail_img,
+            'image'=>$this->thumbnail_img,
             'created_date'=>$this->created_at,
         ];
     }
