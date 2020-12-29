@@ -183,7 +183,7 @@ class truyenfullVn
 //                    $cate_story->category_id = $category_id;
 //                    $cate_story->story_id = $story_id;
 //                    $cate_story->save();
-                    CategoryStory::insertorupdate();
+                    CategoryStory::updateOrInsert(['category_id'=>$category_id,'story_id'=>$story_id]);
                                     }
                             );
                     }
