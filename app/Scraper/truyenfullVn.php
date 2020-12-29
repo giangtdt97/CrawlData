@@ -137,13 +137,7 @@ class truyenfullVn
                         function (Crawler $node) use ($chapter) {
                             $chapter_id = Chapter::where('url', $chapter->url)->value('id');
                             $content = $node->filter('div.chapter-c')->text();
-                            $chap = Content::where('chapter_id', $chapter_id)->first();
-                            if (!$chap) {
-                                $chap = new Content();
-                                $chap->content = $content;
-                                $chap->chapter_id = $chapter_id;
-                                $chap->save();
-                            }
+                            Chapter::where('id', $chapter_id)->update(['content'=>$content]);
                         }
 
                     );

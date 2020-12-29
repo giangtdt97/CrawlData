@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Crypt;
 
 class Category extends JsonResource
 {
@@ -16,7 +17,7 @@ class Category extends JsonResource
     {
         return [
             'id'=>$this->id,
-            'name' => $this->name,
+            'name' => Crypt::encrypt($this->name),
             'total story' =>$this->stories()->count(),
         ];
     }
