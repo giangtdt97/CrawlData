@@ -78,36 +78,23 @@ class truyenfullVn
         $stories = Story::all();
         foreach ($stories as $story) {
             for ($k = 1; $k <= 100; $k++) {
-                $urls = [$story->url . 'trang-' . $k . '/#list-chapter'];
-                foreach ($urls as $url) {
-                    try {
-                        $client = new Client();
-                        try {
-                            $crawler = $client->request('GET', $url);
-                        } catch (TransportException $e) {
-                            Log::info($e);
-                            return true;
+                $client = new Client();
+                $crawler = $client->request('GET', $story->url . 'trang-' . $k . '/#list-chapter');
+                $crawler->filter('div.col-xs-12.col-sm-6.col-md-6 li')->each(
+                    function (Crawler $node) use ($story) {
+                        $story_id = Story::where('url', $story->url)->value('id');
+                        $name = $node->filter('a')->attr('title');
+                        $url = $node->filter('a')->attr('href');
+                        $chapter = Chapter::where('url', $url)->first();
+                        if (!$chapter) {
+                            $chapter = new Chapter();
+                            $chapter->title = $name;
+                            $chapter->url = $url;
+                            $chapter->story_id = $story_id;
+                            $chapter->save();
                         }
-                        $crawler->filter('div.col-xs-12.col-sm-6.col-md-6 li')->each(
-                            function (Crawler $node) use ($story) {
-                                $story_id = Story::where('url', $story->url)->value('id');
-                                $name = $node->filter('a')->attr('title');
-                                $url = $node->filter('a')->attr('href');
-                                $chapter = Chapter::where('url', $url)->first();
-                                if (!$chapter) {
-                                    $chapter = new Chapter();
-                                    $chapter->title = $name;
-                                    $chapter->url = $url;
-                                    $chapter->story_id = $story_id;
-                                    $chapter->save();
-                                }
-                            }
-                        );
-                    } catch (\InvalidArgumentException $e) {
-                        report($e);
-                        return true;
                     }
-                }
+                );
             }
         }
     }
@@ -118,7 +105,7 @@ class truyenfullVn
 //        foreach ($stories as $story) {
 //            $client = new Client();
 //            $crawler = $client->request('GET', $story->url);
-//            $crawler->filter('col-xs-12.col-info-desc')->each(
+//            $crawler->filter('div.col-xs-12.col-info-desc')->each(
 //                function (Crawler $node) use ($story) {
 //                    $story_id = Story::where('url', $story->url)->value('id');
 //                    $name = $node->filter('h3.title')->text();
@@ -144,15 +131,8 @@ class truyenfullVn
 //        }
         $chapters = Chapter::all();
         foreach ($chapters as $chapter) {
-            $urls = array($chapter->url);
-            foreach ($urls as $url) {
-                    $client = new Client();
-                    try{
-                    $crawler = $client->request('GET', $url);
-                }catch (TransportException $e){
-                        Log::info($e);
-                        return true;
-                    }
+            $client = new Client();
+                    $crawler = $client->request('GET', $chapter->url);
                     $crawler->filter('div#wrap')->each(
                         function (Crawler $node) use ($chapter) {
                             $chapter_id = Chapter::where('url', $chapter->url)->value('id');
@@ -167,9 +147,8 @@ class truyenfullVn
                         }
 
                     );
-
-            }
         }
+
 //        $stories = Story::all();
 //        foreach ($stories as $story) {
 //            $client = new Client();
@@ -191,7 +170,7 @@ class truyenfullVn
 //                                    }
 //                            );
 //                    }
-
+//
             }
 }
 
