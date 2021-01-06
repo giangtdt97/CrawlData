@@ -40,5 +40,6 @@ class ScrapeDetailCommand extends Command
     {
         $bot = new truyenfullVn();
         $bot->scrape_detail();
+        $this->info('Command Run successfully!');
     }
 }

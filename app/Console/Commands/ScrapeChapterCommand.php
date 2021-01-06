@@ -40,5 +40,6 @@ class ScrapeChapterCommand extends Command
     {
         $bot = new truyenfullVn();
         $bot->scrape_chapter();
+        $this->info('Command Run successfully!');
     }
 }

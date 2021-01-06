@@ -3838,6 +3838,12 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/tests/Unit/ExampleTest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/ScrapeChapterCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/ScrapeChapterCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/ScrapeCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/ScrapeCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/ScrapeDetailCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/ScrapeDetailCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/ScrapeStoryCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/ScrapeStoryCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" />
@@ -4283,7 +4289,11 @@
       <workItem from="1608884933610" duration="5244000" />
       <workItem from="1609122306908" duration="14918000" />
       <workItem from="1609208630306" duration="6061000" />
-      <workItem from="1609215724056" duration="7078000" />
+      <workItem from="1609215724056" duration="11171000" />
+      <workItem from="1609309504238" duration="187000" />
+      <workItem from="1609668418502" duration="6774000" />
+      <workItem from="1609726727844" duration="16926000" />
+      <workItem from="1609814323211" duration="15628000" />
     </task>
     <servers />
   </component>

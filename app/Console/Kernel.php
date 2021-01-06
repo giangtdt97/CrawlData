@@ -13,7 +13,9 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        Commands\ScrapeStoryCommand::class,
+        Commands\ScrapeChapterCommand::class,
+        Commands\ScrapeDetailCommand::class,
     ];
 
     /**
@@ -25,11 +27,11 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
 
-        $filepath=base_path().'\storage\test.txt';
-        $schedule->command('scrape:start')->daily()->sendOutputTo($filepath);
-        $schedule->command('scrape_story:start')->daily()->sendOutputTo($filepath);
-        $schedule->command('scrape_chapter:start')->daily()->sendOutputTo($filepath);
-//        $schedule->command('scrape_rating:start')->daily()->sendOutputTo($filepath);
+//        $filepath=base_path().'\storage\test.txt';
+//        $schedule->command('scrape:start')->daily()->sendOutputTo($filepath);
+        $schedule->command('scrape_story:start')->daily();
+        $schedule->command('scrape_chapter:start')->daily();
+        $schedule->command('scrape_detail:start')->daily();
     }
 
     /**

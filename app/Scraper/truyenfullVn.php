@@ -31,10 +31,7 @@ class truyenfullVn
                 $url = $node->filter('a')->attr('href');
                 $category = Category::where('name', $name)->first();
                 if (!$category ) {
-                    $category = new Category();
-                    $category->name = $name;
-                    $category->url = $url;
-                    $category->save();
+                    Category::updateOrInsert(['name'=>$name,'url'=>$url]);
                 }
             }
         );
@@ -44,11 +41,11 @@ class truyenfullVn
     {
         $categories = Category::all();
         foreach ($categories as $category) {
-            for($k = 1; $k <= 380; $k++){
+            for ($k = 1; $k <= 1; $k++) {
                 $client = new Client();
-                try{
-                    $crawler = $client->request('GET', $category->url. 'trang-'.$k);
-                }catch (TransportException $e){
+                try {
+                    $crawler = $client->request('GET', $category->url . 'trang-' . $k);
+                } catch (TransportException $e) {
                     Log::info($e);
                     return true;
                 }
@@ -56,38 +53,26 @@ class truyenfullVn
                     function (Crawler $node) {
                         $name = $node->filter('h3.truyen-title a')->attr('title');
                         $url = $node->filter('h3.truyen-title a')->attr('href');
-                        $author=$node->filter('span[itemprop="author"]')->text();
+                        $author = $node->filter('span[itemprop="author"]')->text();
                         $story = Story::where('url', $url)->first();
                         if (!$story) {
                             $story = new Story();
                             $story->name = $name;
                             $story->url = $url;
-                            $story->author=$author;
+                            $story->author = $author;
                             $story->save();
                         }
                     }
                 );
             }
         }
-//                $stories = Story::all();
-//        foreach ($stories as $story) {
-//            $client = new Client();
-//            $crawler = $client->request('GET', $story->url);
-//            $crawler->filter('div.col-xs-12.col-info-desc')->each(
-//                function (Crawler $node) use ($story) {
-//                    $story_id = Story::where('url', $story->url)->value('id');
-//                    $thumbnail=$node->filter('img[itemprop="image"]')->attr('src');
-//                    Story::where('id', $story_id)->update(['thumbnail_img'=>$thumbnail]);
-//                }
-//                );
-//        }
-        }
+    }
 
     public function scrape_chapter()
     {
-        $stories = Story::all();
+        $stories = Story::whereNotNull('thumbnail_img')->get();
         foreach ($stories as $story) {
-            for ($k = 1; $k <= 100; $k++) {
+            for ($k = 1; $k <= 10; $k++) {
                 $client = new Client();
                 try {
                     $crawler = $client->request('GET', $story->url . 'trang-' . $k . '/#list-chapter');
@@ -117,7 +102,7 @@ class truyenfullVn
 
     public function scrape_detail()
     {
-//        $stories = Story::all();
+//        $stories = Story::whereNull('thumbnail_img')->get();;
 //        foreach ($stories as $story) {
 //            try {
 //                $client = new Client();
@@ -135,7 +120,7 @@ class truyenfullVn
 //                    $description = $node->filter('div[itemprop="description"]')->html();
 //                    $ratingCount=$node->filter('strong span[itemprop="ratingCount"]')->text();
 //                    $thumbnail=$node->filter('img[itemprop="image"]')->attr('src');
-//                    $rate =Rate::where('story_title', $name)->first();
+//                    $rate =Rate::where('id', $story_id)->first();
 //                    if (!$rate) {
 //                        $rate = new Rate();
 //                        $rate->story_id = $story_id;
@@ -147,47 +132,48 @@ class truyenfullVn
 //                        $rate->description = $description;
 //                        $rate->save();
 //                    }
-//                    Story::where('id', $story_id)->update(['thumbnail_img'=>$thumbnail]);
+//                    Story::where('id', $story_id)->whereNull('thumbnail_img')->update(['thumbnail_img'=>$thumbnail]);
 //                }
 //                );
 //        }
-//        $chapters = Chapter::all();
-//        foreach ($chapters as $chapter) {
-//            $client = new Client();
-//                    $crawler = $client->request('GET', $chapter->url);
-//                    $crawler->filter('div#wrap')->each(
-//                        function (Crawler $node) use ($chapter) {
-//                            $chapter_id = Chapter::where('url', $chapter->url)->value('id');
-//                            $content = $node->filter('div.chapter-c')->html();
-//                            Chapter::where('id', $chapter_id)->update(['content'=>$content]);
-//                        }
-//
-//                    );
-//        }
-
-        $stories = Story::all();
-        foreach ($stories as $story) {
-            $client = new Client();
+        $chapters = Chapter::whereNull('content')->get();
+        foreach ($chapters as $chapter) {
             try {
-                $crawler = $client->request('GET', $story->url);
-            } catch (TransportException $e) {
+                $client = new Client();
+                $crawler = $client->request('GET', $chapter->url);
+            }catch (TransportException $e) {
                 Log::info($e);
                 return true;
             }
-            $crawler->filter('div.info a[itemprop="genre"]')->each(
-                function (Crawler $node) use ($story) {
-                    $url = $node->filter('a')->attr('href');
-                    $category_id = Category::where('url',$url )->value('id');
-                    $story_id = Story::where('url',$story->url)->value('id');
-//                    $cate_story = new CategoryStory();
-//                    $cate_story->category_id = $category_id;
-//                    $cate_story->story_id = $story_id;
-//                    $cate_story->save();
-                    CategoryStory::updateOrInsert(['category_id'=>$category_id,'story_id'=>$story_id]);
-                                    }
-                            );
-                    }
+            $crawler->filter('div#wrap')->each(
+                function (Crawler $node) use ($chapter) {
+                    $chapter_id = Chapter::where('url', $chapter->url)->value('id');
+                    $content = $node->filter('div.chapter-c')->html();
+                    Chapter::where('id', $chapter_id)->whereNull('content')->update(['content'=>$content]);
+                }
 
-            }
+            );
+        }
+//
+//        $stories = Story::all();
+//        foreach ($stories as $story) {
+//            $client = new Client();
+//            try {
+//                $crawler = $client->request('GET', $story->url);
+//            } catch (TransportException $e) {
+//                Log::info($e);
+//                return true;
+//            }
+//            $crawler->filter('div.info a[itemprop="genre"]')->each(
+//                function (Crawler $node) use ($story) {
+//                    $url = $node->filter('a')->attr('href');
+//                    $category_id = Category::where('url',$url )->value('id');
+//                    $story_id = Story::where('url',$story->url)->value('id');
+//                    CategoryStory::updateOrInsert(['category_id'=>$category_id,'story_id'=>$story_id]);
+//                                    }
+//                            );
+//                    }
+
+    }
 }
 
