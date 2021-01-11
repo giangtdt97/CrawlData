@@ -43,7 +43,7 @@ class CategoryController extends Controller
         return new CategoryResource($category);
     }
     public function getStories($id){
-        $stories = Category::findorFail($id)->stories()->paginate(15);
+        $stories = Category::findorFail($id)->stories()->inRandomOrder()->paginate(15);
         $getResource=StoryResource::collection($stories);
         $payload = Crypt::encrypt($getResource);
         return $getResource;

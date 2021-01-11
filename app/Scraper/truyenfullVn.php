@@ -86,8 +86,7 @@ class truyenfullVn
                         $name = $node->filter('a')->attr('title');
                         $url = $node->filter('a')->attr('href');
                         $chapter = Chapter::where('url', $url)->first();
-                        $img=Story::where('thumbnail_img',$story->thumbnail_img);
-                        if (!$chapter && !is_null($img)) {
+                        if (!$chapter) {
                             $chapter = new Chapter();
                             $chapter->title = $name;
                             $chapter->url = $url;

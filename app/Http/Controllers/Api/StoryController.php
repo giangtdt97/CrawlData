@@ -19,7 +19,7 @@ class StoryController extends Controller
      */
     public function index()
     {
-        $data = Story::paginate(10);
+        $data = Story::inRandomOrder()->paginate(10);
         $getResource=StoryResource::collection($data);
         $payload = Crypt::encrypt($getResource);
         return $getResource;

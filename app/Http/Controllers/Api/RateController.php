@@ -20,7 +20,7 @@ class RateController extends Controller
      */
     public function index()
     {
-        $data = Rate::where('rating','>=',8.0)->paginate(20);
+        $data = Rate::where('rating','>=',8.0)->inRandomOrder()->paginate(20);
         $getResource=RateResource::collection($data);
         $payload = Crypt::encrypt($getResource);
         return $getResource;
@@ -52,7 +52,7 @@ class RateController extends Controller
 //            ],Response::HTTP_OK);
     }
     public function getRatingCount(){
-        $data =Rate::where('rating_count','>=',100)->paginate(20);
+        $data =Rate::where('rating_count','>=',100)->inRandomOrder()->paginate(20);
         return RateResource::collection($data);
     }
 }
