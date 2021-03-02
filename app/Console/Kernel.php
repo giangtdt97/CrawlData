@@ -16,6 +16,8 @@ class Kernel extends ConsoleKernel
         Commands\ScrapeStoryCommand::class,
         Commands\ScrapeChapterCommand::class,
         Commands\ScrapeDetailCommand::class,
+        Commands\ScrapeChapterContenrCommand::class,
+        Commands\ScrapeCategoryStoryCommand::class,
     ];
 
     /**
@@ -32,6 +34,8 @@ class Kernel extends ConsoleKernel
         $schedule->command('scrape_story:start')->daily();
         $schedule->command('scrape_chapter:start')->daily();
         $schedule->command('scrape_detail:start')->daily();
+        $schedule->command('scrape_pivot_id:start')->daily();
+        $schedule->command('scrape_scrape_chapter_detail:start:start')->daily();
     }
 
     /**
