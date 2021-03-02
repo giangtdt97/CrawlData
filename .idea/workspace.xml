@@ -21,9 +21,44 @@
       <change afterPath="$PROJECT_DIR$/../laravel-file-upload/.idea/laravel-file-upload.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/.idea/test.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../translate-language/.idea/translate-language.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/.idea/ultim8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/.idea/ultim8.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/app/Http/Controllers/AboutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/app/Http/Controllers/AboutController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/app/Http/Controllers/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/app/Http/Controllers/ServicesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/app/Http/Controllers/ServicesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/config/voyager.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/config/voyager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/resources/lang/en/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/resources/lang/en/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/resources/views/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/resources/views/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/resources/views/blog-single.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/resources/views/blog-single.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/resources/views/blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/resources/views/blog.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/resources/views/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/resources/views/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/resources/views/layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/resources/views/layout/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/resources/views/services.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/resources/views/services.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/resources/views/shared/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/resources/views/shared/_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/resources/views/shared/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/resources/views/shared/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/resources/views/shared/_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/resources/views/shared/_menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/resources/views/team.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/resources/views/team.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/resources/views/vendor/voyager/blogs/edit-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/resources/views/vendor/voyager/blogs/edit-add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BanabaTech/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanabaTech/storage/app/public/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../BanabaTech/storage/app/public/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FoodKhang" beforeDir="false" afterPath="$PROJECT_DIR$/../FoodKhang" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PhpProject/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpProject/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhpProject/TotalPoint.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpProject/lavenza/TotalPoint.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhpProject/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhpProject/role_name.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpProject/lavenza/role_name.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhpProject/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpProject/lavenza/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhpProject/searchInvalidOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpProject/lavenza/searchInvalidOrder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhpProject/searchOrderGelandSpray.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpProject/lavenza/searchOrderGelandSpray.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhpProject/searchPoint.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpProject/lavenza/searchPoint.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhpProject/show.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhpProject/showTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpProject/lavenza/showTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PhpProject/test.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TestBlade/.editorconfig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TestBlade/.env.example" beforeDir="false" />
@@ -3839,8 +3874,6 @@
       <change beforePath="$PROJECT_DIR$/../TestBlade/webpack.mix.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UIEmail" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/StoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/StoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scraper/truyenfullVn.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecomerce_voyager" beforeDir="false" afterPath="$PROJECT_DIR$/../ecomerce_voyager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fooday" beforeDir="false" />
@@ -4301,7 +4334,19 @@
       <workItem from="1610332874065" duration="449000" />
       <workItem from="1610333383938" duration="4000" />
       <workItem from="1610333419682" duration="17000" />
-      <workItem from="1610337206467" duration="306000" />
+      <workItem from="1610337206467" duration="869000" />
+      <workItem from="1610347364831" duration="612000" />
+      <workItem from="1610718068673" duration="3413000" />
+      <workItem from="1610893352917" duration="9370000" />
+      <workItem from="1610936393857" duration="134000" />
+      <workItem from="1610937152393" duration="696000" />
+      <workItem from="1610965272302" duration="235000" />
+      <workItem from="1610965690244" duration="314000" />
+      <workItem from="1610968215842" duration="56000" />
+      <workItem from="1611220032068" duration="314000" />
+      <workItem from="1614333642509" duration="534000" />
+      <workItem from="1614334189726" duration="664000" />
+      <workItem from="1614677892128" duration="798000" />
     </task>
     <servers />
   </component>
